@@ -1,0 +1,93 @@
+/* 
+  V5Localizable.strings
+  V5KFClientTest
+
+  Created by chyrain on 15/12/29.
+  Copyright © 2015年 V5KF. All rights reserved.
+*/
+"v5_worker_service" = "人工客服";
+"v5_cancel" = "取消";
+"v5_success" = "成功";
+"v5_confirm" = "确定";
+"v5_chat_title" = "V5客服";
+"v5_send" = "发送";
+"v5_alert_title" = "提醒";
+"v5_alert_no_camera" = "相机权限受限，请到设置中开启";
+"v5_alert_no_browser" = "打开浏览器失败";
+"v5_alert_no_phone" = "拨号失败";
+"v5_save" = "保存";
+"v5_copy" = "拷贝";
+"v5_copy_link" = "拷贝链接";
+"v5_open_in_safari" = "在Safari中打开";
+"v5_dail_number" = "直接拨打";
+"v5_toast_no_empty" = "输入不能为空";
+"v5_toast_send_success" = "发送成功";
+"v5_toast_send_failure" = "发送失败";
+"v5_connecting" = "正在连接...";
+"v5_title_eg" = "标题";
+"v5_view_more" = "查看全文";
+"v5_picture_save_success" = "保存图片成功";
+"v5_picture_save_failure" = "保存图片失败";
+"v5_relative_question:" = "相关问题:";
+"v5_hot_question:" = "常见问题:";
+"v5_relative_question" = "相关问题";
+"v5_hot_question" = "常见问题";
+"v5_photo" = "图片";
+"v5_camera" = "拍照";
+"v5_worker" = "人工客服";
+"v5_input_hint" = "请在这里输入内容";
+"v5_defmsg_location" = "[位置]";
+"v5_defmsg_image" = "[图片]";
+"v5_defmsg_link" = "[链接]";
+"v5_defmsg_event" = "[事件]";
+"v5_defmsg_voice" = "[语音]";
+"v5_defmsg_video" = "[视频]";
+"v5_defmsg_shortVideo" = "[短视频]";
+"v5_defmsg_articles" = "[图文]";
+"v5_defmsg_music" = "[音乐]";
+"v5_defmsg_note" = "[留言]";
+"v5_defmsg_comment" = "[评价]";
+"v5_defmsg_worker" = "[转人工客服]";
+"v5_defmsg_control" = "[控制消息]";
+"v5_defmsg_unknown" = "[不支持类型消息(%d)]";
+"v5_today" = "今天";
+"v5_tomorrow" = "明天";
+"v5_yesterday" = "昨天";
+"v5_am" = "上午";
+"v5_pm" = "下午";
+"v5_night" = "晚上";
+"v5_dawn" = "凌晨";
+"v5_sun" = "星期日";
+"v5_mon" = "星期一";
+"v5_tues" = "星期二";
+"v5_wed" = "星期三";
+"v5_thurs" = "星期四";
+"v5_fri" = "星期五";
+"v5_sat" = "星期六";
+"v5_content_empty" = "没有内容";
+"v5_hot_question_fail" = "获取常见问题失败";
+"v5_hot_question_empty" = "未获取到常见问题";
+"v5_waiting_for_connection" = "等待连接建立...";
+"v5_no_more_message" = "没有更多消息";
+"v5_start_message" = "您好，我是智能客服机器人小五，请问有什么能帮到您的吗？"; //开场白
+"v5_network_not_reachable" = "无网络连接";
+"v5_connect_success" = "连接成功";
+"v5_support_info" = "由V5KF提供技术支持";
+"v5_check_network_retry" = "请检查网络连接后重试!";
+"v5_not_initialized" = "未初始化";
+"v5_account_authfailed" = "帐号验证失败";
+"v5_initialized_failed" = "初始化失败";
+"v5_connect_failed" = "连接错误";
+"v5_connect_broke" = "连接断开";
+"v5_retry" = "重试";
+"v5_connection_error" = "连接异常断开，是否重试？";
+"v5_pull_refresh_title" = "下拉查看历史消息";
+"v5_release_to_refresh" = "松开立即刷新";
+"v5_refreshing" = "正在刷新...";
+
+"v5_press_to_talk" = "按住说话";
+"v5_release_to_send" = "松开发送";
+"v5_slideup_to_cancel" = "上滑取消";
+"v5_release_to_cancel" = "松开取消";
+"v5_too_short" = "太短";
+"v5_convert_failed" = "转换失败";
