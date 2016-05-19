@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a1b-xZ-FZ8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--商品目录-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="activity_fullscreen_bg" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-EG-xLN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="946.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PWc-EG-xLN" secondAttribute="height" multiplier="45:71" id="Sjg-d2-xqs"/>
+                                </constraints>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3Y-84-nQE">
+                                <rect key="frame" x="0.0" y="487" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="MF9-23-OyT"/>
+                                    <tabBarItem systemItem="recents" id="6ij-jY-ZNl"/>
+                                    <tabBarItem systemItem="more" id="dUM-wQ-fTT"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x3Y-84-nQE" secondAttribute="bottom" id="5f3-ZR-lQ8"/>
+                            <constraint firstAttribute="trailing" secondItem="x3Y-84-nQE" secondAttribute="trailing" id="AKV-ZM-Lwj"/>
+                            <constraint firstItem="x3Y-84-nQE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QMF-S7-L7U"/>
+                            <constraint firstAttribute="trailing" secondItem="PWc-EG-xLN" secondAttribute="trailing" id="meE-Ot-pQ7"/>
+                            <constraint firstItem="PWc-EG-xLN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pZY-Ab-6F1"/>
+                            <constraint firstItem="PWc-EG-xLN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="toY-QL-bpA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PWc-EG-xLN" secondAttribute="bottom" id="yvJ-0F-n38"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yvJ-0F-n38"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="商品目录" id="epG-3U-JpZ">
+                        <barButtonItem key="rightBarButtonItem" title="联系客服" id="Rc9-RX-94Q">
+                            <connections>
+                                <action selector="clickStartClient:" destination="BYZ-38-t0r" id="fnv-2k-Qye"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fC9-xP-aoC">
+            <objects>
+                <navigationController id="a1b-xZ-FZ8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CzM-nf-dvp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.57647058823529407" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pXT-te-cgg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80N-ar-Bln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="activity_fullscreen_bg" width="360" height="568"/>
+    </resources>
+</document>

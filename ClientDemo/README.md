@@ -1,0 +1,1 @@
+注：ClientDemo为SDK使用示例，在有新版本SDK时，需要将文件夹年内的"V5ClientSDK”开头的文件夹以group导入到项目中。
