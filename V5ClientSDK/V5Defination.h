@@ -147,5 +147,6 @@ typedef NS_ENUM(NSInteger, KV5ClientOpenMode) {
 typedef NS_ENUM(NSInteger, KV5ClientServingStatus) {
     ServingStatus_robot = 0,            // 机器人服务
     ServingStatus_queue = 1,            // 排队(转人工，等待人工客服接入中，当前为机器人服务)
-    ServingStatus_worker = 2            // 人工服务
+    ServingStatus_worker = 2,           // 人工服务
+    ServingStatus_inTrust = 3           // 人工服务下交给机器人托管
 };

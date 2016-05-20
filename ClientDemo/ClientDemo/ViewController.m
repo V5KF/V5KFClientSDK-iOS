@@ -202,7 +202,10 @@
             chatVC.title = @"机器人服务中";
             break;
         case ServingStatus_worker:
-            chatVC.title = [V5ClientAgent shareClient].config.workerName; // 当前正在服务的坐席名
+            chatVC.title = [NSString stringWithFormat:@"%@为您服务", [V5ClientAgent shareClient].config.workerName];
+            break;
+        case ServingStatus_inTrust:
+            chatVC.title = @"机器人托管中";
             break;
         default:
             break;

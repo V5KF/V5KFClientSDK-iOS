@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		591974211CEDBED300F0AD72 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5919740F1CEDBED300F0AD72 /* libV5Client.a */; };
 		591974221CEDBED300F0AD72 /* V5Client.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 591974131CEDBED300F0AD72 /* V5Client.bundle */; };
+		591974241CEF128C00F0AD72 /* libV5Client-log.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 591974231CEF128C00F0AD72 /* libV5Client-log.a */; };
 		592667AF1C46555200F20E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667AE1C46555200F20E9D /* main.m */; };
 		592667B21C46555200F20E9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B11C46555200F20E9D /* AppDelegate.m */; };
 		592667B51C46555200F20E9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B41C46555200F20E9D /* ViewController.m */; };
@@ -30,7 +30,6 @@
 		5919740B1CEDBED300F0AD72 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		5919740C1CEDBED300F0AD72 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		5919740D1CEDBED300F0AD72 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		5919740F1CEDBED300F0AD72 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
 		591974101CEDBED300F0AD72 /* V5Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Article.h; sourceTree = "<group>"; };
 		591974111CEDBED300F0AD72 /* V5ArticlesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ArticlesMessage.h; sourceTree = "<group>"; };
 		591974121CEDBED300F0AD72 /* V5ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ChatViewController.h; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		5919741D1CEDBED300F0AD72 /* V5TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5TextMessage.h; sourceTree = "<group>"; };
 		5919741E1CEDBED300F0AD72 /* V5UndefinedMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5UndefinedMessage.h; sourceTree = "<group>"; };
 		5919741F1CEDBED300F0AD72 /* V5VoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5VoiceMessage.h; sourceTree = "<group>"; };
+		591974231CEF128C00F0AD72 /* libV5Client-log.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libV5Client-log.a"; sourceTree = "<group>"; };
 		592667AA1C46555200F20E9D /* V5客服SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "V5客服SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592667AE1C46555200F20E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		592667B01C46555200F20E9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,11 +75,11 @@
 			files = (
 				59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */,
 				59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */,
+				591974241CEF128C00F0AD72 /* libV5Client-log.a in Frameworks */,
 				592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */,
 				592667E21C4655F000F20E9D /* Security.framework in Frameworks */,
 				592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */,
 				592667DE1C4655D700F20E9D /* Foundation.framework in Frameworks */,
-				591974211CEDBED300F0AD72 /* libV5Client.a in Frameworks */,
 				592667DC1C4655CE00F20E9D /* libicucore.tbd in Frameworks */,
 				592667DA1C4655C200F20E9D /* libsqlite3.tbd in Frameworks */,
 			);
@@ -91,8 +91,8 @@
 		591974091CEDBED300F0AD72 /* V5ClientSDK */ = {
 			isa = PBXGroup;
 			children = (
+				591974231CEF128C00F0AD72 /* libV5Client-log.a */,
 				591974131CEDBED300F0AD72 /* V5Client.bundle */,
-				5919740F1CEDBED300F0AD72 /* libV5Client.a */,
 				5919740A1CEDBED300F0AD72 /* dec_if.h */,
 				5919740B1CEDBED300F0AD72 /* if_rom.h */,
 				5919740C1CEDBED300F0AD72 /* interf_dec.h */,
