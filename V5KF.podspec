@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.ios.exclude_files = 'Classes/osx'
   # s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
-  s.frameworks = 'Foundation', AVFoundation', 'CoreTelephony', 'Security', 'AudioToolbox', 'CFNetwork'
+  s.frameworks = 'Foundation', 'AVFoundation', 'CoreTelephony', 'Security', 'AudioToolbox', 'CFNetwork'
   s.libraries = 'sqlite3', 'icucore', 'stdc++'
   s.vendored_libraries = 'V5ClientSDK/libV5Client.a'
   s.preserve_path = '**/libV5Client.a'
