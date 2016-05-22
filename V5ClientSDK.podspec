@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "V5KF"
+  s.name             = "V5ClientSDK"
   s.version          = "1.1.1"
   s.summary          = "A customer service SDK for users of V5KF.COM used on iOS."
   s.description      = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
 
-  s.source_files = 'V5ClientSDK/*'
+  s.source_files = 'V5ClientSDK/*.h'
   # s.resources = 'Assets'
 
   # s.ios.exclude_files = 'Classes/osx'
