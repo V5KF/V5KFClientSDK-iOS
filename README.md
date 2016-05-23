@@ -6,9 +6,9 @@ V5KF客服SDK iOS
 在 Podfile 中加入：
 
 ```
-use_frameworks!
+platform :ios, '7.0'
 
-pod 'V5ClientSDK'
+pod ‘V5ClientSDK’
 ```
 
 接着pod安装 即可：
