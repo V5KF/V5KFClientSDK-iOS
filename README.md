@@ -10,7 +10,7 @@ V5KF客服SDK iOS
 ### Swift 项目
 
 * 按照上面的方法引入V5ClientSDK 的文件。
-* 在 Bridging Header 头文件中，‘#import <V5ClientAgent.h>’等相关头文件。注：[如何添加 Bridging Header](http://bencoding.com/2015/04/15/adding-a-swift-bridge-header-manually/)。
+* 在 Bridging Header 头文件中，‘#import “V5ClientAgent.h”’等相关头文件。注：[如何添加 Bridging Header](http://bencoding.com/2015/04/15/adding-a-swift-bridge-header-manually/)。
 
 ## 引入依赖库
 
