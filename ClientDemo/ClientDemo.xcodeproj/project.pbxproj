@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		591974221CEDBED300F0AD72 /* V5Client.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 591974131CEDBED300F0AD72 /* V5Client.bundle */; };
 		592667AF1C46555200F20E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667AE1C46555200F20E9D /* main.m */; };
 		592667B21C46555200F20E9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B11C46555200F20E9D /* AppDelegate.m */; };
 		592667B51C46555200F20E9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B41C46555200F20E9D /* ViewController.m */; };
@@ -20,34 +19,15 @@
 		592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667DF1C4655E400F20E9D /* AudioToolbox.framework */; };
 		592667E21C4655F000F20E9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E11C4655F000F20E9D /* Security.framework */; };
 		592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E31C4655FC00F20E9D /* CFNetwork.framework */; };
-		595BF8E01CF53919001026E7 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8DF1CF53919001026E7 /* libV5Client.a */; };
-		59988A231CF4635000E9C515 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59988A211CF4635000E9C515 /* libopencore-amrnb.a */; };
-		59988A241CF4635000E9C515 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59988A221CF4635000E9C515 /* libopencore-amrwb.a */; };
+		595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E71CF54506001026E7 /* libopencore-amrnb.a */; };
+		595BF9011CF54506001026E7 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E81CF54506001026E7 /* libopencore-amrwb.a */; };
+		595BF9021CF54506001026E7 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E91CF54506001026E7 /* libV5Client.a */; };
+		595BF9031CF54506001026E7 /* V5Client.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 595BF8F31CF54506001026E7 /* V5Client.bundle */; };
 		59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD027E1CE4674A00DCDF34 /* AVFoundation.framework */; };
 		59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD02821CE467FB00DCDF34 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5919740A1CEDBED300F0AD72 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		5919740B1CEDBED300F0AD72 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		5919740C1CEDBED300F0AD72 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		5919740D1CEDBED300F0AD72 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		591974101CEDBED300F0AD72 /* V5Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Article.h; sourceTree = "<group>"; };
-		591974111CEDBED300F0AD72 /* V5ArticlesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ArticlesMessage.h; sourceTree = "<group>"; };
-		591974121CEDBED300F0AD72 /* V5ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ChatViewController.h; sourceTree = "<group>"; };
-		591974131CEDBED300F0AD72 /* V5Client.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = V5Client.bundle; sourceTree = "<group>"; };
-		591974141CEDBED300F0AD72 /* V5ClientAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ClientAgent.h; sourceTree = "<group>"; };
-		591974151CEDBED300F0AD72 /* V5Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Config.h; sourceTree = "<group>"; };
-		591974161CEDBED300F0AD72 /* V5ControlMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ControlMessage.h; sourceTree = "<group>"; };
-		591974171CEDBED300F0AD72 /* V5Defination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Defination.h; sourceTree = "<group>"; };
-		591974181CEDBED300F0AD72 /* V5Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Delegate.h; sourceTree = "<group>"; };
-		591974191CEDBED300F0AD72 /* V5ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ImageMessage.h; sourceTree = "<group>"; };
-		5919741A1CEDBED300F0AD72 /* V5LocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5LocationMessage.h; sourceTree = "<group>"; };
-		5919741B1CEDBED300F0AD72 /* V5Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Message.h; sourceTree = "<group>"; };
-		5919741C1CEDBED300F0AD72 /* V5MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5MessageManager.h; sourceTree = "<group>"; };
-		5919741D1CEDBED300F0AD72 /* V5TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5TextMessage.h; sourceTree = "<group>"; };
-		5919741E1CEDBED300F0AD72 /* V5UndefinedMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5UndefinedMessage.h; sourceTree = "<group>"; };
-		5919741F1CEDBED300F0AD72 /* V5VoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5VoiceMessage.h; sourceTree = "<group>"; };
 		592667AA1C46555200F20E9D /* V5客服SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "V5客服SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592667AE1C46555200F20E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		592667B01C46555200F20E9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,9 +44,33 @@
 		592667DF1C4655E400F20E9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		592667E11C4655F000F20E9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		592667E31C4655FC00F20E9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		595BF8DF1CF53919001026E7 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
-		59988A211CF4635000E9C515 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		59988A221CF4635000E9C515 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		595BF8E21CF54506001026E7 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		595BF8E31CF54506001026E7 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		595BF8E41CF54506001026E7 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		595BF8E51CF54506001026E7 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		595BF8E71CF54506001026E7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		595BF8E81CF54506001026E7 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		595BF8E91CF54506001026E7 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
+		595BF8EB1CF54506001026E7 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		595BF8EC1CF54506001026E7 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		595BF8EE1CF54506001026E7 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		595BF8EF1CF54506001026E7 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		595BF8F01CF54506001026E7 /* V5Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Article.h; sourceTree = "<group>"; };
+		595BF8F11CF54506001026E7 /* V5ArticlesMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ArticlesMessage.h; sourceTree = "<group>"; };
+		595BF8F21CF54506001026E7 /* V5ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ChatViewController.h; sourceTree = "<group>"; };
+		595BF8F31CF54506001026E7 /* V5Client.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = V5Client.bundle; sourceTree = "<group>"; };
+		595BF8F41CF54506001026E7 /* V5ClientAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ClientAgent.h; sourceTree = "<group>"; };
+		595BF8F51CF54506001026E7 /* V5Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Config.h; sourceTree = "<group>"; };
+		595BF8F61CF54506001026E7 /* V5ControlMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ControlMessage.h; sourceTree = "<group>"; };
+		595BF8F71CF54506001026E7 /* V5Defination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Defination.h; sourceTree = "<group>"; };
+		595BF8F81CF54506001026E7 /* V5Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Delegate.h; sourceTree = "<group>"; };
+		595BF8F91CF54506001026E7 /* V5ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5ImageMessage.h; sourceTree = "<group>"; };
+		595BF8FA1CF54506001026E7 /* V5LocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5LocationMessage.h; sourceTree = "<group>"; };
+		595BF8FB1CF54506001026E7 /* V5Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5Message.h; sourceTree = "<group>"; };
+		595BF8FC1CF54506001026E7 /* V5MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5MessageManager.h; sourceTree = "<group>"; };
+		595BF8FD1CF54506001026E7 /* V5TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5TextMessage.h; sourceTree = "<group>"; };
+		595BF8FE1CF54506001026E7 /* V5UndefinedMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5UndefinedMessage.h; sourceTree = "<group>"; };
+		595BF8FF1CF54506001026E7 /* V5VoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V5VoiceMessage.h; sourceTree = "<group>"; };
 		59CD027E1CE4674A00DCDF34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59CD02801CE467E800DCDF34 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		59CD02821CE467FB00DCDF34 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -79,12 +83,12 @@
 			files = (
 				59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */,
 				59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */,
-				59988A231CF4635000E9C515 /* libopencore-amrnb.a in Frameworks */,
 				592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */,
 				592667E21C4655F000F20E9D /* Security.framework in Frameworks */,
-				595BF8E01CF53919001026E7 /* libV5Client.a in Frameworks */,
-				59988A241CF4635000E9C515 /* libopencore-amrwb.a in Frameworks */,
+				595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */,
+				595BF9021CF54506001026E7 /* libV5Client.a in Frameworks */,
 				592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */,
+				595BF9011CF54506001026E7 /* libopencore-amrwb.a in Frameworks */,
 				592667DE1C4655D700F20E9D /* Foundation.framework in Frameworks */,
 				592667DC1C4655CE00F20E9D /* libicucore.tbd in Frameworks */,
 				592667DA1C4655C200F20E9D /* libsqlite3.tbd in Frameworks */,
@@ -94,37 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		591974091CEDBED300F0AD72 /* V5ClientSDK */ = {
-			isa = PBXGroup;
-			children = (
-				595BF8DF1CF53919001026E7 /* libV5Client.a */,
-				59988A211CF4635000E9C515 /* libopencore-amrnb.a */,
-				59988A221CF4635000E9C515 /* libopencore-amrwb.a */,
-				591974131CEDBED300F0AD72 /* V5Client.bundle */,
-				5919740A1CEDBED300F0AD72 /* dec_if.h */,
-				5919740B1CEDBED300F0AD72 /* if_rom.h */,
-				5919740C1CEDBED300F0AD72 /* interf_dec.h */,
-				5919740D1CEDBED300F0AD72 /* interf_enc.h */,
-				591974101CEDBED300F0AD72 /* V5Article.h */,
-				591974111CEDBED300F0AD72 /* V5ArticlesMessage.h */,
-				591974121CEDBED300F0AD72 /* V5ChatViewController.h */,
-				591974141CEDBED300F0AD72 /* V5ClientAgent.h */,
-				591974151CEDBED300F0AD72 /* V5Config.h */,
-				591974161CEDBED300F0AD72 /* V5ControlMessage.h */,
-				591974171CEDBED300F0AD72 /* V5Defination.h */,
-				591974181CEDBED300F0AD72 /* V5Delegate.h */,
-				591974191CEDBED300F0AD72 /* V5ImageMessage.h */,
-				5919741A1CEDBED300F0AD72 /* V5LocationMessage.h */,
-				5919741B1CEDBED300F0AD72 /* V5Message.h */,
-				5919741C1CEDBED300F0AD72 /* V5MessageManager.h */,
-				5919741D1CEDBED300F0AD72 /* V5TextMessage.h */,
-				5919741E1CEDBED300F0AD72 /* V5UndefinedMessage.h */,
-				5919741F1CEDBED300F0AD72 /* V5VoiceMessage.h */,
-			);
-			name = V5ClientSDK;
-			path = ../../V5ClientSDK;
-			sourceTree = "<group>";
-		};
 		592667A11C46555200F20E9D = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +126,7 @@
 		592667AC1C46555200F20E9D /* ClientDemo */ = {
 			isa = PBXGroup;
 			children = (
-				591974091CEDBED300F0AD72 /* V5ClientSDK */,
+				595BF8E11CF54506001026E7 /* V5ClientSDK */,
 				592667B01C46555200F20E9D /* AppDelegate.h */,
 				592667B11C46555200F20E9D /* AppDelegate.m */,
 				592667B31C46555200F20E9D /* ViewController.h */,
@@ -173,6 +146,65 @@
 				592667AE1C46555200F20E9D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		595BF8E11CF54506001026E7 /* V5ClientSDK */ = {
+			isa = PBXGroup;
+			children = (
+				595BF8E21CF54506001026E7 /* dec_if.h */,
+				595BF8E31CF54506001026E7 /* if_rom.h */,
+				595BF8E41CF54506001026E7 /* interf_dec.h */,
+				595BF8E51CF54506001026E7 /* interf_enc.h */,
+				595BF8E61CF54506001026E7 /* lib */,
+				595BF8EA1CF54506001026E7 /* opencore-amrnb */,
+				595BF8ED1CF54506001026E7 /* opencore-amrwb */,
+				595BF8F01CF54506001026E7 /* V5Article.h */,
+				595BF8F11CF54506001026E7 /* V5ArticlesMessage.h */,
+				595BF8F21CF54506001026E7 /* V5ChatViewController.h */,
+				595BF8F31CF54506001026E7 /* V5Client.bundle */,
+				595BF8F41CF54506001026E7 /* V5ClientAgent.h */,
+				595BF8F51CF54506001026E7 /* V5Config.h */,
+				595BF8F61CF54506001026E7 /* V5ControlMessage.h */,
+				595BF8F71CF54506001026E7 /* V5Defination.h */,
+				595BF8F81CF54506001026E7 /* V5Delegate.h */,
+				595BF8F91CF54506001026E7 /* V5ImageMessage.h */,
+				595BF8FA1CF54506001026E7 /* V5LocationMessage.h */,
+				595BF8FB1CF54506001026E7 /* V5Message.h */,
+				595BF8FC1CF54506001026E7 /* V5MessageManager.h */,
+				595BF8FD1CF54506001026E7 /* V5TextMessage.h */,
+				595BF8FE1CF54506001026E7 /* V5UndefinedMessage.h */,
+				595BF8FF1CF54506001026E7 /* V5VoiceMessage.h */,
+			);
+			name = V5ClientSDK;
+			path = ../../V5ClientSDK;
+			sourceTree = "<group>";
+		};
+		595BF8E61CF54506001026E7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				595BF8E71CF54506001026E7 /* libopencore-amrnb.a */,
+				595BF8E81CF54506001026E7 /* libopencore-amrwb.a */,
+				595BF8E91CF54506001026E7 /* libV5Client.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		595BF8EA1CF54506001026E7 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				595BF8EB1CF54506001026E7 /* interf_dec.h */,
+				595BF8EC1CF54506001026E7 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		595BF8ED1CF54506001026E7 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				595BF8EE1CF54506001026E7 /* dec_if.h */,
+				595BF8EF1CF54506001026E7 /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				592667BD1C46555200F20E9D /* LaunchScreen.storyboard in Resources */,
-				591974221CEDBED300F0AD72 /* V5Client.bundle in Resources */,
+				595BF9031CF54506001026E7 /* V5Client.bundle in Resources */,
 				592667BA1C46555200F20E9D /* Assets.xcassets in Resources */,
 				592667B81C46555200F20E9D /* Main.storyboard in Resources */,
 			);
@@ -368,7 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../V5ClientSDK",
+					"$(PROJECT_DIR)/../V5ClientSDK/lib",
 				);
 				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.v5kf.sdkdemo;
@@ -389,7 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../V5ClientSDK",
+					"$(PROJECT_DIR)/../V5ClientSDK/lib",
 				);
 				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.v5kf.sdkdemo;
