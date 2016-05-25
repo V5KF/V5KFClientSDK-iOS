@@ -44,10 +44,6 @@
 		592667DF1C4655E400F20E9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		592667E11C4655F000F20E9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		592667E31C4655FC00F20E9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		595BF8E21CF54506001026E7 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		595BF8E31CF54506001026E7 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		595BF8E41CF54506001026E7 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		595BF8E51CF54506001026E7 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		595BF8E71CF54506001026E7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		595BF8E81CF54506001026E7 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		595BF8E91CF54506001026E7 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
@@ -151,10 +147,6 @@
 		595BF8E11CF54506001026E7 /* V5ClientSDK */ = {
 			isa = PBXGroup;
 			children = (
-				595BF8E21CF54506001026E7 /* dec_if.h */,
-				595BF8E31CF54506001026E7 /* if_rom.h */,
-				595BF8E41CF54506001026E7 /* interf_dec.h */,
-				595BF8E51CF54506001026E7 /* interf_enc.h */,
 				595BF8E61CF54506001026E7 /* lib */,
 				595BF8EA1CF54506001026E7 /* opencore-amrnb */,
 				595BF8ED1CF54506001026E7 /* opencore-amrwb */,

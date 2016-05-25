@@ -46,7 +46,7 @@
     // 设置用户信息，坐席端可查看
     config.nickname = @"iso-sdk-test－李四";
     config.gender = 1; //性别：0-未知 1－男 2－女
-    config.avatar = @"http://tcdn21.wn517.com/dev/avatar/nl2fci00fzwpx6m4o2xi.jpg@0o_0l_64w_90q_1pr.jpg"; //客户头像URL
+    config.avatar = @"http://v5kfimg-10013434.image.myqcloud.com/c428de7a00019cfb572188dbaf3d2c1a/thumbnail"; //客户头像URL
     config.uid = @"ios-customer-id-for-test"; //用户唯一ID,不同的uid消息记录单独保存
     
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
