@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "V5ClientSDK"
-  s.version          = "1.1.2"
+  s.version          = "1.1.3"
   s.summary          = "A customer service SDK for users of V5KF.COM used on iOS."
   s.description      = <<-DESC
                        It is a customer service SDK used on iOS, which implement by Objective-C. More info in http://ww.v5kf.com.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/V5KF/V5KFClientSDK-iOS"
   s.license          = 'MIT'
   s.author           = { "Chyrain" => "chyrain_v5kf@qq.com" }
-  s.source           = { :git => "https://github.com/V5KF/V5KFClientSDK-iOS.git", :tag => "1.1.2" }
+  s.source           = { :git => "https://github.com/V5KF/V5KFClientSDK-iOS.git", :tag => "1.1.3" }
   s.social_media_url = 'http://www.v5kf.com'
 
   s.platform     = :ios, '7.0'
