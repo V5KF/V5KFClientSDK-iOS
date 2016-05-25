@@ -20,7 +20,9 @@
 		592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667DF1C4655E400F20E9D /* AudioToolbox.framework */; };
 		592667E21C4655F000F20E9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E11C4655F000F20E9D /* Security.framework */; };
 		592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E31C4655FC00F20E9D /* CFNetwork.framework */; };
-		59988A1A1CEF24CC00E9C515 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59988A191CEF24CC00E9C515 /* libV5Client.a */; };
+		595BF8E01CF53919001026E7 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8DF1CF53919001026E7 /* libV5Client.a */; };
+		59988A231CF4635000E9C515 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59988A211CF4635000E9C515 /* libopencore-amrnb.a */; };
+		59988A241CF4635000E9C515 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59988A221CF4635000E9C515 /* libopencore-amrwb.a */; };
 		59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD027E1CE4674A00DCDF34 /* AVFoundation.framework */; };
 		59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD02821CE467FB00DCDF34 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
@@ -62,7 +64,9 @@
 		592667DF1C4655E400F20E9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		592667E11C4655F000F20E9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		592667E31C4655FC00F20E9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		59988A191CEF24CC00E9C515 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
+		595BF8DF1CF53919001026E7 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
+		59988A211CF4635000E9C515 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		59988A221CF4635000E9C515 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		59CD027E1CE4674A00DCDF34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59CD02801CE467E800DCDF34 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		59CD02821CE467FB00DCDF34 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -73,11 +77,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59988A1A1CEF24CC00E9C515 /* libV5Client.a in Frameworks */,
 				59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */,
 				59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */,
+				59988A231CF4635000E9C515 /* libopencore-amrnb.a in Frameworks */,
 				592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */,
 				592667E21C4655F000F20E9D /* Security.framework in Frameworks */,
+				595BF8E01CF53919001026E7 /* libV5Client.a in Frameworks */,
+				59988A241CF4635000E9C515 /* libopencore-amrwb.a in Frameworks */,
 				592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */,
 				592667DE1C4655D700F20E9D /* Foundation.framework in Frameworks */,
 				592667DC1C4655CE00F20E9D /* libicucore.tbd in Frameworks */,
@@ -91,7 +97,9 @@
 		591974091CEDBED300F0AD72 /* V5ClientSDK */ = {
 			isa = PBXGroup;
 			children = (
-				59988A191CEF24CC00E9C515 /* libV5Client.a */,
+				595BF8DF1CF53919001026E7 /* libV5Client.a */,
+				59988A211CF4635000E9C515 /* libopencore-amrnb.a */,
+				59988A221CF4635000E9C515 /* libopencore-amrwb.a */,
 				591974131CEDBED300F0AD72 /* V5Client.bundle */,
 				5919740A1CEDBED300F0AD72 /* dec_if.h */,
 				5919740B1CEDBED300F0AD72 /* if_rom.h */,
