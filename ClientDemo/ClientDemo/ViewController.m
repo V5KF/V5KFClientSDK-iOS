@@ -46,8 +46,8 @@
     // 设置用户信息，坐席端可查看
     config.nickname = @"iso-sdk-test－李四";
     config.gender = 1; //性别：0-未知 1－男 2－女
-    config.avatar = @"http://v5kfimg-10013434.image.myqcloud.com/c428de7a00019cfb572188dbaf3d2c1a/thumbnail"; //客户头像URL
-    config.uid = @"ios-customer-id-for-test"; //用户唯一ID,不同的uid消息记录单独保存
+    config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
+    //config.uid = @"ios-customer-id-for-test"; //用户唯一ID, 不设置则由SDK自动生成
     
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
     // 不显示底部栏（有底部栏的需加此配置）
@@ -125,7 +125,7 @@
 - (void)onClientViewConnect {
     NSLog(@"<--- onClientViewConnect --->");
     
-    // 连接建立后找指定客服
+    // 连接建立后找指定客服 参数：客服组ID、客服ID
     //[[V5ClientAgent shareClient] humanServiceOfGroupId:1 workerId:114052];
 }
 
