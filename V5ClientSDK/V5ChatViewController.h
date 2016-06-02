@@ -41,25 +41,32 @@
 /**
  *  用户点击链接，包括普通URL(HTML超链接)、图文链接、电话号码
  *
- *  @param url 链接地址
+ *  @param url      链接地址
+ *  @param linkType 链接类型
+ *
+ *  @return 返回是否消费此事件
  */
-- (void)userClickLink:(NSString *)url linkType:(KV5LinkType)linkType;
+- (BOOL)userClickLink:(NSString *)url linkType:(KV5LinkType)linkType;
 
 /**
  *  用户点击位置消息
  *
  *  @param lat 纬度
  *  @param lng 经度
+ *
+ *  @return 返回是否消费此事件
  */
-- (void)userClickLocationWithLatitude:(double)lat longitude:(double)lng;
+- (BOOL)userClickLocationWithLatitude:(double)lat longitude:(double)lng;
 
 /**
  *  用户点击图片消息
  *
  *  @param image 图片
  *  @param url   图片链接
+ * 
+ *  @return 返回是否消费此事件
  */
-- (void)userClickImageWithImage:(UIImage *)image picUrl:(NSString *)url;
+- (BOOL)userClickImageWithImage:(UIImage *)image picUrl:(NSString *)url;
 
 /**
  *  用户在会话视图中收到消息

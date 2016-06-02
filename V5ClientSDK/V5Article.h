@@ -19,6 +19,10 @@
 // 简述
 @property (nonatomic, strong) NSString * desc;
 
+- (instancetype)initWithTitle:(NSString *)title
+                       picUrl:(NSString *)picUrl
+                          url:(NSString *)url
+                         desc:(NSString *)desc;
 - (instancetype)initWithJSON:(NSDictionary *)data;
 - (void)addPropertyToJSONObject:(NSMutableDictionary *)JSONObj;
 

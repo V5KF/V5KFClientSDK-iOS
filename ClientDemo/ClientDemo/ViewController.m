@@ -34,7 +34,7 @@
      */
     
     /**
-     * 下面为会话界面配置选项，注释的为非必须
+     * 下面为会话界面配置选项
      */
     
     // 获得V5ClientAgent配置项
@@ -127,39 +127,62 @@
     
     // 连接建立后找指定客服 参数：客服组ID、客服ID
     //[[V5ClientAgent shareClient] humanServiceOfGroupId:1 workerId:114052];
+    
+    // 发送图文消息示例
+//    V5ArticlesMessage *articleMsg = [[V5ArticlesMessage alloc] init];
+//    NSMutableArray *articleArray = [NSMutableArray arrayWithCapacity:1];
+//    V5Article *article = [[V5Article alloc] init];
+//    article.title = @"V5KF";
+//    article.picUrl = @"http://rs.v5kf.com/upload/10000/14568171024.png";
+//    article.url = @"http://www.v5kf.com/public/weixin/page.html?site_id=10000&id=218833&uid=3657455033351629359";
+//    article.desc = @"V5KF是围绕核心技术“V5智能机器人”研发的高品质在线客服系统。可以运用到各种领域，目前的主要产品有：微信智能云平台、网页智能客服系统...";
+//    [articleArray addObject:article];
+//    articleMsg.articles = articleArray;
+//    [[V5ClientAgent shareClient] sendMessage:articleMsg];
+
 }
 
 /**
  *  用户点击链接，包括普通URL(HTML超链接)、图文链接、电话号码
  *
- *  @param url 链接地址
+ *  @param url      链接地址
+ *  @param linkType 链接类型
+ *
+ *  @return 是否消费此事件(返回YES则SDK不处理此事件，否则默认处理)
  */
-//- (void)userClickLink:(NSString *)url linkType:(KV5LinkType)linkType {
-//    NSLog(@"<--- userClickLink:%@ --->", url);
-//    //可以跳转到你自己的WebView界面打开链接内容
-//}
+- (BOOL)userClickLink:(NSString *)url linkType:(KV5LinkType)linkType {
+    NSLog(@"<--- userClickLink:%@ ---> linkType:%ld", url, (long)linkType);
+    //可以跳转到你自己的WebView界面打开链接内容
+    return NO;
+}
 
 /**
  *  用户点击位置消息
  *
  *  @param lat 纬度
  *  @param lng 经度
+ *  
+ *  @return 是否消费此事件(返回YES则SDK不处理此事件，否则默认处理)
  */
-//- (void)userClickLocationWithLatitude:(double)lat longitude:(double)lng {
-//    NSLog(@"<--- userClickLocationWithLat:%lf lng:%lf --->", lat, lng);
-//    //可以跳转到你自己的位置查看页面
-//}
+- (BOOL)userClickLocationWithLatitude:(double)lat longitude:(double)lng {
+    NSLog(@"<--- userClickLocationWithLat:%lf lng:%lf --->", lat, lng);
+    //可以跳转到你自己的位置查看页面
+    return NO;
+}
 
 /**
  *  用户点击图片消息
  *
  *  @param image 图片
  *  @param url   图片链接
+ *  
+ *  @return 是否消费此事件(返回YES则SDK不处理此事件，否则默认处理)
  */
-//- (void)userClickImageWithImage:(UIImage *)image picUrl:(NSString *)url {
-//    NSLog(@"<--- userClickImageWithImage:%@ --->", url);
-//    //可以跳转到你自己的图片查看界面
-//}
+- (BOOL)userClickImageWithImage:(UIImage *)image picUrl:(NSString *)url {
+    NSLog(@"<--- userClickImageWithImage:%@ --->", url);
+    //可以跳转到你自己的图片查看界面
+    return NO;
+}
 
 /**
  *  用户在会话视图中收到消息
@@ -168,7 +191,7 @@
  */
 - (void)clientDidReceiveMessage:(V5Message *)message {
     NSLog(@"<--- clientDidReceiveMessage:%@ --->", [message getDefaultContent]);
-    //在这里可以处理接收消息的额外行为，比如通知震动等
+    //在这里可以处理接收消息的额外行为，比如自定义通知、震动等
 }
 
 /**

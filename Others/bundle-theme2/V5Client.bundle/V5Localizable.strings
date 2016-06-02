@@ -80,6 +80,7 @@
 "v5_connect_failed" = "连接错误";
 "v5_connect_broke" = "连接断开";
 "v5_retry" = "重试";
+"v5_connection_timeout" = "连接超时";
 "v5_connection_error" = "连接异常断开，是否重试？";
 "v5_pull_refresh_title" = "下拉查看历史消息";
 "v5_release_to_refresh" = "松开立即刷新";

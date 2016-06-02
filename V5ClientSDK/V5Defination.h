@@ -115,6 +115,7 @@ typedef NS_ENUM(NSInteger, KV5ExceptionStatus) {
     Exception_Message_SendFailed,       // 消息发送失败
     Exception_Image_UploadFailed,       // 图片上传失败
     Exception_No_Network,               // 没有网络
+    Exception_Connection_Timeout,       // 连接超时
     Exception_Connection_Error,         // 网络请求错误
     //Exception_User_IsOffline,           // 顾客为离线状态，当前操作无法操作
     //Exception_ServiceError,             // 服务器出错
