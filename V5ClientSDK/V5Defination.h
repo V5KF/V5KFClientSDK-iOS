@@ -139,7 +139,7 @@ typedef NS_ENUM(NSInteger, KV5ExceptionStatus) {
 };
 
 typedef NS_ENUM(NSInteger, KV5ClientOpenMode) {
-    ClientOpenModeDefault = 0,          // 默认开场方式（无消息记录显示默认开场白，否则显示历史消息）
+    ClientOpenModeDefault = 0,          // 默认开场方式（无消息记录显示默认开场白，带参则参数作为开场白，否则显示历史消息）
     ClientOpenModeQuestion = 1,         // 自定义开场白，设置开场问题获得对应开场白
     ClientOpenModeNone = 2,             // 无开场白方式，有则显示历史消息
     ClientOpenModeAutoHuman = 3         // 开场自动转人工客服

@@ -44,9 +44,9 @@
     //[config shouldUpdateUserInfo];
     
     // 设置用户信息，坐席端可查看
-    config.nickname = @"iso-sdk-test－李四";
+    config.nickname = @"ios_sdk_test_v5kf";
     config.gender = 1; //性别：0-未知 1－男 2－女
-    config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
+    //config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
     //config.uid = @"ios-customer-id-for-test"; //用户唯一ID, 不设置则由SDK自动生成
     
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
@@ -77,8 +77,11 @@
     myBackItem.title = @"返回";
     self.navigationItem.backBarButtonItem = myBackItem;
     
-    // 设置开场白方式,启动会话前设置，默认ClientOpenModeDefault
-    // ClientOpenModeQuestion结合后台机器人培训内容可根据使用场景配置不同需求的开场消息
+    // 设置开场白方式,启动会话前设置，默认ClientOpenModeDefault，具体说明如下:
+    // ClientOpenModeQuestion: 结合后台机器人培训内容可根据使用场景配置不同需求的开场消息
+    // ClientOpenModeDefault: param为nil时显示系统后台配置的开场白，param不为空则显示param指定内容作为开场白
+    // ClientOpenModeAutoHuman: 自动转人工客服
+    // ClientOpenModeNone: 无开场白
     //[chatViewController setClientOpenMode:ClientOpenModeDefault withParam:nil];
     
     // 修改对话界面UI属性
