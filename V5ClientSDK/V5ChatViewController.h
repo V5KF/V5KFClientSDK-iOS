@@ -11,6 +11,11 @@
 
 @class V5ChatViewController;
 
+typedef NS_ENUM(NSInteger, KV5PresentType) {
+    PresentType_Push = 0,           // 默认navigation push方式，全屏界面
+    PresentType_Popover = 1         // iPad上的popover方式，非全屏
+};
+
 @protocol V5ChatViewDelegate <NSObject>
 @optional
 /**
@@ -100,7 +105,7 @@
  *
  */
 //会话界面操作相关代理
-@property (nonatomic, strong) id<V5ChatViewDelegate> delegate;
+@property (nonatomic, assign) id<V5ChatViewDelegate> delegate;
 
 //设备唯一标识符。当视图控制器关闭，则将顾客离线并开启推送
 @property (nonatomic, strong) NSString * deviceToken;
@@ -128,6 +133,8 @@
 @property (nonatomic, strong) UITableView *chatTableView;
 //底部多功能输入栏（请勿修改frame等信息）
 @property (nonatomic, strong) UIView *footerView;
+//[新增]presentType标志,默认为Push，用于界面显示控制
+@property (nonatomic, assign) KV5PresentType presentType;
 
 /**
  *  设置开场方式与参数，需在进入会话前设置
