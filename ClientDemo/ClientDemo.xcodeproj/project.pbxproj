@@ -398,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.v5kf.sdkdemo;
 				PRODUCT_NAME = "V5客服SDK";
 				PROVISIONING_PROFILE = "7ee21f0e-f5da-47ff-b660-a6e308cd896c";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -419,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.v5kf.sdkdemo;
 				PRODUCT_NAME = "V5客服SDK";
 				PROVISIONING_PROFILE = "3ee65776-48f0-4ef6-843d-49ffea4dbd92";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

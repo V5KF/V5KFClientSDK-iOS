@@ -88,9 +88,16 @@
     // 对话列表背景色
     //chatViewController.chatTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    // 启动会话界面，使用导航模式推出视图
+    // 启动会话界面，使用导航模式推出视图(PresentType_Push)
     [self.navigationController pushViewController:chatViewController animated:YES];
-
+    
+//    // presentType: ViewController呈现方式标识，默认PresentType_Push
+//    chatViewController.presentType = PresentType_Popover;
+//    // 启动会话界面(PresentType_Popover)
+//    UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:chatViewController];
+//    [popover setBackgroundColor:[UIColor colorWithRed:235.0/255 green:235.0/255 blue:235.0/255 alpha:1]];
+//    popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width/2, chatViewController.view.frame.size.height/2);
+//    [popover presentPopoverFromRect:CGRectMake(0,618,1024,50) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
 }
 
 #pragma mark - V5ChatViewDelegate
