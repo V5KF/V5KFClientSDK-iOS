@@ -52,7 +52,7 @@
 	<string>qf023</string>
 	<key>/::g</key>
 	<string>qf024</string>
-	<key>/:|-</key>
+	<key>/:|-)</key>
 	<string>qf025</string>
 	<key>/::!</key>
 	<string>qf026</string>
@@ -200,7 +200,17 @@
 	<string>qf097</string>
 	<key>/:skip</key>
 	<string>qf098</string>
-	<key>/:&amp;&gt;</key>
+	<key>/:oY</key>
 	<string>qf099</string>
+	<key>/:#-0</key>
+	<string>qf100</string>
+	<key>/:hiphot</key>
+	<string>qf101</string>
+	<key>/:kiss</key>
+	<string>qf102</string>
+	<key>/:&lt;&amp;</key>
+	<string>qf103</string>
+	<key>/:&amp;&gt;</key>
+	<string>qf104</string>
 </dict>
 </plist>
