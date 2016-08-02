@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/V5KF/V5KFClientSDK-iOS"
   s.license          = 'MIT'
   s.author           = { "Chyrain" => "chyrain_v5kf@qq.com" }
-  s.source           = { :git => "https://github.com/V5KF/V5KFClientSDK-iOS.git", :tag => "1.1.7" }
+  s.source           = { :git => "https://github.com/V5KF/V5KFClientSDK-iOS.git", :tag => "1.1.8" }
   s.social_media_url = 'http://www.v5kf.com'
 
   s.platform     = :ios, '7.0'
