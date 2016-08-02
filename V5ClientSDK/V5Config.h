@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *nickname; // 昵称
 @property (nonatomic, strong) NSString *avatar; // 头像
 @property (nonatomic, assign) NSInteger gender; // 性别
+@property (nonatomic, assign) NSInteger vip; // vip等级
 @property (nonatomic, strong) NSString *site; // 站点编号
 @property (nonatomic, strong) NSString *account; // 应用账号
 //@property (nonatomic, strong) NSDictionary *customContent; // 取消自定义用户信息，该用消息携带自定义参数方式

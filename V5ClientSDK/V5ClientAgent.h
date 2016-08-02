@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, strong) V5Config * config;
 @property (nonatomic, assign, getter=isConnected) BOOL connected;
 
+@property (nonatomic, assign, getter=isPhotoLibrary) BOOL photoLibrary; // 打开图库标识，用于控制屏幕方向
+@property (nonatomic, assign) NSUInteger photoLibraryInterfaceOrientations; // 图库屏幕方向
+
 /**
  *  单例对象获取
  *

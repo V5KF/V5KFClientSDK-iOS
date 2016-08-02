@@ -53,4 +53,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    /* 解决限制旋转方向导致打开相册报错问题 */
+    if ([V5ClientAgent shareClient].isPhotoLibrary) { // 允许打开相册时任意方向
+        return UIInterfaceOrientationMaskAll;
+    } else { // 恢复到您需要指定的方向
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
 @end
