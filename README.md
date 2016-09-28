@@ -44,11 +44,17 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 ```
 platform :ios, '7.0'
 
-pod 'V5ClientSDK', '~> 1.1.8'
+pod 'V5ClientSDK'
 ```
 
 接着pod安装 即可：
 
 ```
 $ pod install
+```
+
+有新版本更新时：
+
+```
+$ pod update V5ClientSDK
 ```
