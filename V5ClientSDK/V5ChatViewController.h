@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *
  *  @return 返回是否消费此事件
  */
-- (BOOL)userClickLink:(NSString *)url linkType:(KV5LinkType)linkType;
+- (BOOL)userClickLink:(nullable NSString *)url linkType:(KV5LinkType)linkType;
 
 /**
  *  用户点击位置消息
@@ -71,14 +71,14 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  * 
  *  @return 返回是否消费此事件
  */
-- (BOOL)userClickImageWithImage:(UIImage *)image picUrl:(NSString *)url;
+- (BOOL)userClickImageWithImage:(UIImage * _Null_unspecified)image picUrl:(NSString * _Null_unspecified)url;
 
 /**
  *  用户在会话视图中收到消息
  *
  *  @param message 消息对象
  */
-- (void)clientDidReceiveMessage:(V5Message *)message;
+- (void)clientDidReceiveMessage:(V5Message * _Nonnull)message;
 
 /**
  *  用户将要发送消息
@@ -87,14 +87,14 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *
  *  @return 修改处理过的消息
  */
-- (V5Message *)userWillSendMessage:(V5Message *)message;
+- (V5Message * _Nonnull)userWillSendMessage:(V5Message * _Nonnull)message;
 
 /**
  *  服务状态改变（正在排队、机器人服务、人工服务）
  *
  *  @param status KV5ClientServingStatus
  */
-- (void)clientViewController:(V5ChatViewController *)chatVC ServingStatusChange:(KV5ClientServingStatus)status;
+- (void)clientViewController:(V5ChatViewController * _Nonnull)chatVC ServingStatusChange:(KV5ClientServingStatus)status;
 
 @end
 
@@ -105,10 +105,10 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *
  */
 //会话界面操作相关代理
-@property (nonatomic, assign) id<V5ChatViewDelegate> delegate;
+@property (nonatomic, assign) id<V5ChatViewDelegate> _Null_unspecified delegate;
 
 //设备唯一标识符。当视图控制器关闭，则将顾客离线并开启推送
-@property (nonatomic, strong) NSString * deviceToken;
+@property (nonatomic, strong) NSString * _Null_unspecified deviceToken;
 
 //系统提示音id
 @property (nonatomic, assign) UInt32 soundID;
@@ -130,9 +130,9 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *  （请勿修改frame等信息）
  */
 //气泡的容器是UITableView（请勿修改frame等信息）
-@property (nonatomic, strong) UITableView *chatTableView;
+@property (nonatomic, strong) UITableView * _Nonnull chatTableView;
 //底部多功能输入栏（请勿修改frame等信息）
-@property (nonatomic, strong) UIView *footerView;
+@property (nonatomic, strong) UIView * _Nonnull footerView;
 //[新增]presentType标志,默认为Push，用于界面显示控制
 @property (nonatomic, assign) KV5PresentType presentType;
 

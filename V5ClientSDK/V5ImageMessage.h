@@ -21,11 +21,18 @@
 // 是否已上传
 @property (nonatomic, assign) BOOL isUpload;
 
+// 图片类型[new add]
+@property (nonatomic, strong) NSString * format;
+// 图片名称[new add]
+@property (nonatomic, strong) NSString * fileName;
+
 - (instancetype)initWithPicUrl:(NSString *)picUrl mediaId:(NSString *)mediaId;
 - (instancetype)initWithImage:(UIImage *)image;
 - (instancetype)initWithJSON:(NSDictionary *)data;
 - (NSString *)toJSONString;
 
 - (NSData *)getImageData;
+- (NSString *)getFileName;
+- (NSString *)getMimeType;
 
 @end

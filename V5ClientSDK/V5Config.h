@@ -22,13 +22,18 @@
 //@property (nonatomic, strong) NSDictionary *customContent; // 取消自定义用户信息，该用消息携带自定义参数方式
 @property (nonatomic) BOOL pushEnable; //是否开启了推送
 
+/* 机器人信息 */
+@property (nonatomic, strong) NSString *robotName; // 机器人名字
+@property (nonatomic, strong) NSString *robotPhoto; // 机器人头像
+@property (nonatomic, strong) NSString *robotIntro; // 机器人开场白
+
 @property (nonatomic, strong) NSString *authorization;
 @property (nonatomic, assign) long timestamp;
 @property (nonatomic, assign) long expires;
 
 @property (nonatomic, strong) NSString *workerPhoto;
 @property (nonatomic, strong) NSString *workerName;
-@property (nonatomic, assign) long long workerId;
+@property (nonatomic, assign) NSInteger workerId;
 
 - (instancetype)initWithUserDefaults:(NSUserDefaults *)userData;
 

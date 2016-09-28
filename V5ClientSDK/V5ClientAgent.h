@@ -17,10 +17,12 @@
 #define _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class V5SRWebSocket;
 @interface V5ClientAgent : NSObject
 
 @property (nullable, nonatomic, strong) V5Config * config;
+@property (nonatomic, weak) id<V5MessageDelegate> messageDelegate;
+@property (nullable, nonatomic, strong) V5SRWebSocket *webSocket;
 @property (nonatomic, assign, getter=isConnected) BOOL connected;
 
 @property (nonatomic, assign, getter=isPhotoLibrary) BOOL photoLibrary; // 打开图库标识，用于控制屏幕方向
@@ -166,6 +168,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param patam 参数可为nil,当mode为ClientOpenModeCommand时不为nil
  */
 - (void)getOpeningMessageOfMode:(KV5ClientOpenMode)mode withParam:(nullable NSString *)param;
+
+/**
+ *  更新站点信息：机器人name、头像等信息
+ */
+- (void)updateSiteInfo;
 
 @end
 

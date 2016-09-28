@@ -1,6 +1,17 @@
 # V5KFClientSDK-iOS
 V5KF客服SDK iOS
 
+### iOS10兼容
+由于SDK中使用到相册和相机，在Info.plist中需要加入以下内容:
+(Version Editor模式):
+
+```
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take pictures</string>
+```
+
 ## V5智能客服 SDK 导入
 
 ### Objective-C 项目
@@ -24,6 +35,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 - AudioToolbox.framework
 - CFNetwork.framework
 - Security.framework
+- MediaPlayer.framework
 
 # CocoaPods 导入
 
