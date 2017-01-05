@@ -48,6 +48,7 @@
     config.gender = 1; //性别：0-未知 1－男 2－女
     //config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
     //config.uid = @"ios-customer-id-for-test"; //用户唯一ID, 不设置则由SDK自动生成
+    //config.deviceToken = @"设备的deviceToken";
     
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
     // 不显示底部栏（有底部栏的需加此配置）

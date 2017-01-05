@@ -15,6 +15,7 @@
 #import <Mobilecoreservices/MobileCoreServices.h>
 
 #define _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_
+typedef void (^V5InitExceptionBlock)(KV5ExceptionStatus status, NSString * _Nullable desc);
 
 NS_ASSUME_NONNULL_BEGIN
 @class V5SRWebSocket;
@@ -54,9 +55,22 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param account  应用账号
  *  @param delegate 异常代理
  */
-+ (void)initWithSiteId:(nullable NSString *)siteId
-               account:(nullable NSString *)account
-     exceptionDelegate:(nullable id<V5ExpcetionDelegate>)delegate;
++ (void)initWithSiteId:(NSString * _Nonnull)siteId
+               account:(NSString * _Nonnull)account
+                 appId:(NSString * _Nonnull)appId
+     exceptionDelegate:(nullable id<V5ExpcetionDelegate>)delegate DEPRECATED_MSG_ATTRIBUTE("此方法将被废弃,请使用带exceptionBlock的init方法代替");
+
+/**
+ *  初始化SDK
+ *
+ *  @param siteId   站点编号
+ *  @param account  应用账号
+ *  @param block    异常回调block
+ */
++ (void)initWithSiteId:(NSString * _Nonnull)siteId
+               account:(NSString * _Nonnull)account
+                 appId:(NSString * _Nonnull)appId
+     exceptionBlock:(nullable V5InitExceptionBlock)block;
 
 /**
  *  开启消息服务(账号认证->参数保存->建立连接)

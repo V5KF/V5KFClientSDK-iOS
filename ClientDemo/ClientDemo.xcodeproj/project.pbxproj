@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590725951E1DD9A6008C4559 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 590725941E1DD9A6008C4559 /* libV5Client.a */; };
 		592667AF1C46555200F20E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667AE1C46555200F20E9D /* main.m */; };
 		592667B21C46555200F20E9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B11C46555200F20E9D /* AppDelegate.m */; };
 		592667B51C46555200F20E9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592667B41C46555200F20E9D /* ViewController.m */; };
@@ -21,13 +22,13 @@
 		592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E31C4655FC00F20E9D /* CFNetwork.framework */; };
 		595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E71CF54506001026E7 /* libopencore-amrnb.a */; };
 		595BF9011CF54506001026E7 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E81CF54506001026E7 /* libopencore-amrwb.a */; };
-		595BF9021CF54506001026E7 /* libV5Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E91CF54506001026E7 /* libV5Client.a */; };
 		595BF9031CF54506001026E7 /* V5Client.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 595BF8F31CF54506001026E7 /* V5Client.bundle */; };
 		59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD027E1CE4674A00DCDF34 /* AVFoundation.framework */; };
 		59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD02821CE467FB00DCDF34 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590725941E1DD9A6008C4559 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
 		592667AA1C46555200F20E9D /* V5客服SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "V5客服SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592667AE1C46555200F20E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		592667B01C46555200F20E9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		592667E31C4655FC00F20E9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		595BF8E71CF54506001026E7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		595BF8E81CF54506001026E7 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		595BF8E91CF54506001026E7 /* libV5Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libV5Client.a; sourceTree = "<group>"; };
 		595BF8EB1CF54506001026E7 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		595BF8EC1CF54506001026E7 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		595BF8EE1CF54506001026E7 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */,
 				592667E21C4655F000F20E9D /* Security.framework in Frameworks */,
 				595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */,
-				595BF9021CF54506001026E7 /* libV5Client.a in Frameworks */,
+				590725951E1DD9A6008C4559 /* libV5Client.a in Frameworks */,
 				592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */,
 				595BF9011CF54506001026E7 /* libopencore-amrwb.a in Frameworks */,
 				592667DE1C4655D700F20E9D /* Foundation.framework in Frameworks */,
@@ -174,9 +174,9 @@
 		595BF8E61CF54506001026E7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				590725941E1DD9A6008C4559 /* libV5Client.a */,
 				595BF8E71CF54506001026E7 /* libopencore-amrnb.a */,
 				595BF8E81CF54506001026E7 /* libopencore-amrwb.a */,
-				595BF8E91CF54506001026E7 /* libV5Client.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
