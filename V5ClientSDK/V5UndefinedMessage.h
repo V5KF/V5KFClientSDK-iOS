@@ -1,6 +1,6 @@
 //
 //  V5UndefinedMessage.h
-//  V5KFClientTest
+//  V5KFClientSDK
 //
 //  Created by V5KF_MBP on 15/12/3.
 //  Copyright © 2015年 V5KF. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  V5KFDefination.h
-//  V5KFClientTest
+//  V5KFClientSDK
 //
 //  Created by V5KF_MBP on 15/11/30.
 //  Copyright © 2015年 V5KF. All rights reserved.
