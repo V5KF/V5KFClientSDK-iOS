@@ -354,7 +354,7 @@ myBackItem.title = @"返回";self.navigationItem.backBarButtonItem = myBackItem
 发送消息结果在 `V5MessageDelegate` 中的方法 `sendMessageResult: expcetion:` 回调。
 
 ### 6.6 生命周期处理
-> 参考 [5.4]()。
+> 参考 [5.4](#54-生命周期处理)。
 
 ### 6.7 获得开场白消息
 ```objective-c
