@@ -72,7 +72,7 @@ V5 智能客服系统客户端可集成到 web、APP 等第三方平台提供客
 4. 下载 SDK
 > 您可以到 V5KF 官网或者[V5KF Github](https://github.com/V5KF/V5KFClientSDK-iOS)*(建议)*页下载智能客服 SDK，包含了开发包和带 UI 界面的 Demo 示例工程，使用CocoaPods导入则可不用下载。
 
-5. 环境要求> 在您集成智能客服 SDK 前环境要求如下:	- 支持的最低版本 iOS 7.0。	- 支持 ARC 的 Xcode 编译器，建议使用最新版本。
+5. 环境要求> 在您集成智能客服 SDK 前环境要求如下:	- 支持的最低版本 iOS 8.0。	- 支持 ARC 的 Xcode 编译器，建议使用最新版本。
 
 ### 4.2 SDK导入
 
@@ -161,7 +161,7 @@ pod 'V5ClientSDK', '~> 1.1.10'
 其中 `siteId` 和 `account` 分别是从 V5 后台可以获取到的站点编号和应用账号。
 
 ### 5.2 用户信息和参数设置
-使用 SDK 提供的 UI 集成，需要在启动会话界面之前进行用户信息和参数配置。配置项如下:
+使用 SDK 提供的 UI 集成，需要在**启动会话界面之前**进行用户信息和参数配置。配置项如下:
 
 ```objective-c
 //需要#import "V5ClientAgent.h"//获得V5ClientAgent配置项V5Config *config = [V5ClientAgent shareClient].config;//设置用户信息，坐席端可查看config.nickname = @"test-张三";config.gender = 1; //性别:0-未知 1-男 2-女config.avatar = @"头像URL"; //客户头像URLconfig.uid = @"ios-user-id-for-test"; //用户唯一ID,不同的uid消息记录单独保存
