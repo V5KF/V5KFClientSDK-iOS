@@ -11,6 +11,7 @@
 
 @protocol V5ExpcetionDelegate <NSObject>
 @optional
+
 /**
  * 发生异常
  * @param status 异常类型

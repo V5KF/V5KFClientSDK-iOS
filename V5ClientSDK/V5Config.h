@@ -35,6 +35,8 @@
 @property (nonatomic, strong) NSString *workerName;
 @property (nonatomic, assign) NSInteger workerId;
 
+@property (nonatomic, assign) BOOL autoSSL;
+
 - (instancetype)initWithUserDefaults:(NSUserDefaults *)userData;
 
 /**

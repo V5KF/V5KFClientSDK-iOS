@@ -1,6 +1,6 @@
 /* 
   V5Localizable.strings
-  V5KFClientTest
+  V5KFClientSDK
 
   Created by chyrain on 15/12/29.
   Copyright © 2015年 V5KF. All rights reserved.
@@ -13,6 +13,7 @@
 "v5_send" = "发送";
 "v5_alert_title" = "提醒";
 "v5_alert_no_camera" = "相机权限受限，请到设置中开启";
+"v5_alert_no_piclibrary" = "相册访问权限受限，请到设置中开启";
 "v5_alert_no_browser" = "打开浏览器失败";
 "v5_alert_no_phone" = "拨号失败";
 "v5_save" = "保存";
