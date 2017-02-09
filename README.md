@@ -344,7 +344,7 @@ self.navigationItem.backBarButtonItem = myBackItem;
 
 ### 5.5 对话界面代理
 
-```
+```objective-c
 @protocol V5ChatViewDelegate <NSObject> @optional
 /**
 * 即将打开会话视图
@@ -464,7 +464,7 @@ self.navigationItem.backBarButtonItem = myBackItem;
 ### 6.3 开启消息服务
 开启消息服务一般在 `UIViewController` 页面打开时进行，具体接口参考如下:
 
-```
+```objective-c
 //开启服务
 [[V5ClientAgent shareClient] startClientWithDelegate:self];
 ```
