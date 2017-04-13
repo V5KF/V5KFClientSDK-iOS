@@ -23,6 +23,7 @@
   - [5.3 启动会话界面](#53-启动会话界面)
   - [5.4 生命周期处理](#54-生命周期处理)
   - [5.5 对话界面代理](#55-对话界面代理)
+  - [5.6 会话界面自定义](#56-会话界面自定义)
 - [6 使用SDK接口开发](#6-使用sdk接口开发)
   - [6.1 初始化SDK](#61-初始化sdk)
   - [6.2 用户信息和参数设置](#62-用户信息和参数设置)
@@ -456,6 +457,66 @@ self.navigationItem.backBarButtonItem = myBackItem;
 	}
 }
 ```
+
+### 5.6 会话界面自定义
+参考 [5.3](#53-启动会话界面) 中，可设置是否允许发送语音和显示头像，此外会话界面中加号打开的功能面版亦支持自定义。
+通过修改V5Client.bundle中v5\_menu\_function.plist中对应项的`enable`为`false`可以控制对应功能项按钮是否显示。
+
+```xml
+<array>
+	<dict>
+		<key>enable</key>
+		<true/>
+		<key>tag</key>
+		<string>HOT_QUESTION</string>
+		<key>name</key>
+		<string>常见问题</string>
+		<key>image</key>
+		<string>V5Client.bundle/v5_icon_ques</string>
+	</dict>
+	<dict>
+		<key>enable</key>
+		<true/>
+		<key>tag</key>
+		<string>RELATIVE_QUESTION</string>
+		<key>name</key>
+		<string>相关问题</string>
+		<key>image</key>
+		<string>V5Client.bundle/v5_icon_relative_ques</string>
+	</dict>
+	<dict>
+		<key>enable</key>
+		<true/>
+		<key>tag</key>
+		<string>PICTURE</string>
+		<key>name</key>
+		<string>图片</string>
+		<key>image</key>
+		<string>V5Client.bundle/v5_icon_photo</string>
+	</dict>
+	<dict>
+		<key>enable</key>
+		<true/>
+		<key>tag</key>
+		<string>CAMERA</string>
+		<key>name</key>
+		<string>拍照</string>
+		<key>image</key>
+		<string>V5Client.bundle/v5_icon_camera</string>
+	</dict>
+	<dict>
+		<key>enable</key>
+		<true/>
+		<key>tag</key>
+		<string>TRANSFER_WORKER</string>
+		<key>name</key>
+		<string>人工客服</string>
+		<key>image</key>
+		<string>V5Client.bundle/v5_icon_worker</string>
+	</dict>
+</array>
+```
+
 
 ## 6 使用SDK接口开发
 > 注：使用SDK接口开发意味着上述 [5.3](#53-启动会话界面) 及之后的内容中的接口将不适用，通过自行开发界面实现消息监听协议`V5MessageDelegate`并处理一系列消息接口，而使用界面开发不需要实现此协议（已在V5ChatViewController中有实现）。
