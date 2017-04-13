@@ -105,7 +105,7 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *
  */
 //会话界面操作相关代理
-@property (nonatomic, assign) id<V5ChatViewDelegate> _Null_unspecified delegate;
+@property (nonatomic, weak) id<V5ChatViewDelegate> _Null_unspecified delegate;
 
 //设备唯一标识符。当视图控制器关闭，则将顾客离线并开启推送
 @property (nonatomic, strong) NSString * _Null_unspecified deviceToken;

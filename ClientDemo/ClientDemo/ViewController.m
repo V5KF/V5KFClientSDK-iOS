@@ -47,8 +47,11 @@
     config.nickname = @"ios_sdk_test_v5kf";
     config.gender = 1; //性别：0-未知 1－男 2－女
     //config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
-    //config.uid = @"ios-customer-id-for-test"; //用户唯一ID, 不设置则由SDK自动生成
+    //config.openId = @"ios-customer-id-for-test"; //用户唯一ID,区分不同登录用户(替代1.2.0之前版本的uid),不设置则系统自动生成此值,可透传到座席端,尽量不要携带特殊字符（ $&+,/:;=?@%#[]以及空格之类的字符，有则会经过urlencode）
     //config.deviceToken = @"设备的deviceToken";
+    
+    // 添加自定义用户信息NSDictionary,(仅在开启对话页面前设置生效)，示例如下：
+    config.userInfo = @{@"商品名称": @"牛仔裤", @"商品价格": @"¥168.00"};
     
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
     // 不显示底部栏（有底部栏的需加此配置）
@@ -214,13 +217,6 @@
  */
 - (V5Message *)userWillSendMessage:(V5Message *)message {
     NSLog(@"<--- userWillSendMessage:%@ --->", [message getDefaultContent]);
-    if (userViewSomething) { //用户浏览某商品
-        message.customContent = @{@"用户等级": @"VIP",
-                                  @"用户积分": @"300",
-                                  @"商品名称": @"牛仔裤",
-                                  @"商品价格": @"¥168.00"};
-        userViewSomething = NO; //标识置为NO，单条消息有效
-    }
     return message;
 }
 

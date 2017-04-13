@@ -1,6 +1,6 @@
 /* 
   V5Localizable.strings
-  V5KFClientTest
+  V5KFClientSDK
 
   Created by chyrain on 15/12/29.
   Copyright © 2015年 V5KF. All rights reserved.
@@ -70,7 +70,7 @@
 "v5_hot_question_empty" = "未获取到常见问题";
 "v5_waiting_for_connection" = "等待连接建立...";
 "v5_no_more_message" = "没有更多消息";
-"v5_start_message" = "您好，我是智能客服机器人小五，请问有什么能帮到您的吗？"; //开场白
+"v5_start_message" = "您好，我是智能客服机器人小五，请问有什么能帮到您的吗？"; //开场白,留空("")则不显示
 "v5_network_not_reachable" = "无网络连接";
 "v5_connect_success" = "连接成功";
 "v5_support_info" = "由V5KF提供技术支持";
@@ -79,9 +79,10 @@
 "v5_account_authfailed" = "帐号验证失败";
 "v5_initialized_failed" = "初始化失败";
 "v5_connect_failed" = "连接错误";
+"v5_connect_broke" = "连接断开";
 "v5_retry" = "重试";
 "v5_connection_timeout" = "连接超时";
-"v5_connection_error" = "连接错误，是否重试？";
+"v5_connection_error" = "连接异常断开，是否重试？";
 "v5_pull_refresh_title" = "下拉查看历史消息";
 "v5_release_to_refresh" = "松开立即刷新";
 "v5_refreshing" = "正在刷新...";

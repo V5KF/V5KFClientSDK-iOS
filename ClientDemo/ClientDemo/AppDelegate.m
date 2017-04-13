@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     // 初始化SDK
-    [V5ClientAgent initWithSiteId:@"10000" account:@"v5kf" appId:@"27100800d9e0" exceptionBlock:^(KV5ExceptionStatus status, NSString * _Nullable desc) {
+    [V5ClientAgent initWithSiteId:@"10000" appId:@"27100800d9e0" exceptionBlock:^(KV5ExceptionStatus status, NSString * _Nullable desc) {
         NSLog(@"[V5 Init result] status:%ld desc:%@", (long)status, desc);
     }];
     

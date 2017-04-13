@@ -45,6 +45,7 @@
 - **deviceToken**: 推送平台用于标识设备的唯一 ID，长度为 64 字节以内的字符串。
 - **用户 ID(uid)**: 标识 APP 所登录的用户的唯一 ID，长度为 64 字节以内的字符串。 
 - **坐席**: 使用 V5 智能客服系统的客服登录席位，本文即指客服工作者。
+- **openId**: 标识 APP 所登录的用户的唯一 ID，长度为 32 字节以内的字符串，合法的openId将从App SDK端透传到座席端。
 
 ## 2 功能说明
 V5 智能客服系统客户端可集成到 web、APP 等第三方平台提供客户在线咨询服务，实
@@ -84,6 +85,8 @@ V5 智能客服系统客户端可集成到 web、APP 等第三方平台提供客
 
 3. 填写对应平台的推送服务器地址
 > 为了使您的 APP 在集成本 SDK 后具有离线消息推送，建议填写您的推送服务器地址，同时也支持第三方推送平台，需要按照本文档规定填写您的 device_token 和绑定的用户 ID。
+
+![SDK推送配置](./pictures/ios_sdk_7.png)
 
 4. 下载 SDK
 > 您可以到 V5KF 官网或者[V5KF Github](https://github.com/V5KF/V5KFClientSDK-iOS)*(建议)*页下载智能客服 SDK，包含了开发包和带 UI 界面的 Demo 示例工程，使用CocoaPods导入则可不用下载。
@@ -125,7 +128,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 ```
 platform :ios, '7.0'
 
-pod 'V5ClientSDK', '~> 1.1.12'
+pod 'V5ClientSDK', '~> 1.2.0'
 ```
 
 接着pod安装 即可：
@@ -183,7 +186,8 @@ pod 'V5ClientSDK', '~> 1.1.12'
     return YES;
 }
 ```
-其中 `siteId` 和 `account` 分别是从 V5 后台可以获取到的站点编号和应用账号。
+其中 `siteId` 和 `account` 分别是从 V5 后台可以获取到的站点编号和AppID。
+![SDK后台配置](./pictures/ios_sdk_6.png)
 
 ### 5.2 用户信息和参数设置
 使用 SDK 提供的 UI 集成，需要在**启动会话界面之前**进行用户信息和参数配置。配置项如下:
@@ -196,7 +200,8 @@ V5Config *config = [V5ClientAgent shareClient].config;
 config.nickname = @"test-张三";
 config.gender = 1; //性别:0-未知 1-男 2-女
 config.avatar = @"头像URL"; //客户头像URL
-config.uid = @"ios-user-id-for-test"; //用户唯一ID,不同的uid消息记录单独保存
+config.openId = @"ios-user-id-for-test"; //用户唯一ID,不同的openId消息记录单独保存,可透传到座席端提供给座席插件,替代v1.2.0之前版本的uid（uid不再使用）
+// 注：openId尽量不要携带特殊字符（ $&+,/:;=?@%#[]以及空格之类的字符）， 若包含则会经过urlencode编码，客席插件收到这样的oid后要相应的解码处理(decodeURIComponent)
 
 //用户信息单次设置即生效，更新用户信息或者切换用户时需调用shouldUpdateUserInfo 
 //[config shouldUpdateUserInfo];
@@ -596,7 +601,7 @@ V5Message *textMessage = [V5MessageManager
 [[V5ClientAgent shareClient] getMessagesWithOffset:0 messageSize:12];
 ```
 
-不同 uid 用户的消息单独保存，消息获取结果通过 `V5MessageDelegate` 中的方法 `getMessagesResult: offset: size: finish: expcetion:` 回调。此外，提供清空消息缓存的接口:
+不同 openId 用户的消息单独保存，消息获取结果通过 `V5MessageDelegate` 中的方法 `getMessagesResult: offset: size: finish: expcetion:` 回调。此外，提供清空消息缓存的接口:
 
 ```objective-c
 //清空消息缓存
@@ -661,4 +666,11 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 	2. 【增加】init 参数增加 appId。
 
 - 2017/02/06 文档版本 Ver0.7_r170209，SDK 版本 v1.1.12(r170209)
-1. 【修复】se等小屏幕机型的部分字体显示不全问题。
+	1. 【修复】se等小屏幕机型的部分字体显示不全问题。]
+
+- 2017/04/05 文档版本 Ver0.8_r170405，SDK 版本 v1.2.0(r170405)
+	1. **【修改】V5Config添加openId参数，修改uid为deprecated（今后不再使用），建议使用openId，openId将透传到座席端可见。**
+	2. 【增加】账号验证需要app_id参数，不需要填写account参数。
+	3. 【优化】后台设置机器人开场白可留空("")，且当V5Localizable.strings的v5_start_message也留空时可不显示开场白，优化magic信息传递机制。
+	4. 【修复】修复已知问题。
+

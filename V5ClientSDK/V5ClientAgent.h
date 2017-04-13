@@ -53,24 +53,22 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param siteId   站点编号
  *  @param account  应用账号
- *  @param delegate 异常代理
+ *  @param block    异常回调block
  */
 + (void)initWithSiteId:(NSString * _Nonnull)siteId
-               account:(NSString * _Nonnull)account
+               account:(NSString * _Nullable)account
                  appId:(NSString * _Nonnull)appId
-     exceptionDelegate:(nullable id<V5ExpcetionDelegate>)delegate DEPRECATED_MSG_ATTRIBUTE("此方法将被废弃,请使用带exceptionBlock的init方法代替");
+     exceptionBlock:(nullable V5InitExceptionBlock)block DEPRECATED_MSG_ATTRIBUTE("此方法将被废弃,不再需要account参数,请使用不带account参数的init方法代替");
 
 /**
  *  初始化SDK
  *
  *  @param siteId   站点编号
- *  @param account  应用账号
  *  @param block    异常回调block
  */
 + (void)initWithSiteId:(NSString * _Nonnull)siteId
-               account:(NSString * _Nonnull)account
                  appId:(NSString * _Nonnull)appId
-     exceptionBlock:(nullable V5InitExceptionBlock)block;
+        exceptionBlock:(nullable V5InitExceptionBlock)block;
 
 /**
  *  开启消息服务(账号认证->参数保存->建立连接)
@@ -83,6 +81,18 @@ NS_ASSUME_NONNULL_BEGIN
  *  关闭消息服务以节省资源(配置推送仍可接收推送通知)
  */
 - (void)stopClient;
+
+/**
+ *  添加自定义客户信息键值对
+ *
+ *  @param info NSDictionary
+ *      示例：
+ *          @{@"用户等级": @"VIP",
+ *          @"用户积分": @"300",
+ *          @"商品名称": @"牛仔裤",
+ *          @"商品价格": @"¥168.00"}
+ */
+- (void)addUserInfo:(NSDictionary * _Nonnull)info;
 
 /**
  *  发送V5Message消息
