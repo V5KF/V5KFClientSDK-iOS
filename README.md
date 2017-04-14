@@ -127,9 +127,9 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入：
 
 ```
-platform :ios, '7.0'
+platform :ios, '8.0'
 
-pod 'V5ClientSDK', '~> 1.2.0'
+pod 'V5ClientSDK', '~> 1.2.1'
 ```
 
 接着pod安装 即可：
@@ -201,7 +201,9 @@ V5Config *config = [V5ClientAgent shareClient].config;
 config.nickname = @"test-张三";
 config.gender = 1; //性别:0-未知 1-男 2-女
 config.avatar = @"头像URL"; //客户头像URL
-config.openId = @"ios-user-id-for-test"; //用户唯一ID,不同的openId消息记录单独保存,可透传到座席端提供给座席插件,替代v1.2.0之前版本的uid（uid不再使用）
+//openId:用户唯一ID,不同的openId消息记录单独保存,可透传到座席端提供给座席插件,替代v1.2.0之前版本的uid（uid不再使用）
+//若您是旧版本SDK用户，只是想升级，为兼容旧版，避免客户信息改变可继续使用config.uid，可不用openId
+config.openId = @"ios-user-id-for-test";
 // 注：openId尽量不要携带特殊字符（ $&+,/:;=?@%#[]以及空格之类的字符）， 若包含则会经过urlencode编码，客席插件收到这样的oid后要相应的解码处理(decodeURIComponent)
 
 //用户信息单次设置即生效，更新用户信息或者切换用户时需调用shouldUpdateUserInfo 
@@ -730,8 +732,12 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 	1. 【修复】se等小屏幕机型的部分字体显示不全问题。]
 
 - 2017/04/05 文档版本 Ver0.8_r170405，SDK 版本 v1.2.0(r170405)
-	1. **【修改】V5Config添加openId参数，修改uid为deprecated（今后不再使用），建议使用openId，openId将透传到座席端可见。**
+	1. **【修改】V5Config添加openId参数，修改uid为deprecated（今后不再使用），建议使用openId，openId将透传到座席端可见，若已使用旧版本SDK，为兼容旧版，避免客户信息改变可继续使用uid。**
 	2. 【增加】账号验证需要app_id参数，不需要填写account参数。
 	3. 【优化】后台设置机器人开场白可留空("")，且当V5Localizable.strings的v5_start_message也留空时可不显示开场白，优化magic信息传递机制。
 	4. 【修复】修复已知问题。
+
+- 2017/04/14 文档版本 Ver0.8_r170414，SDK 版本 v1.2.1(r170414)
+	1. 恢复并优化对旧版本SDK(1.2.0以下)的uid兼容性；
+	2. 优化未读消息优先显示，有未读消息不用下拉刷新即可全部显示(默认优先显示未读消息，通过`chatViewController.unreadShowFirst`可设置)。
 

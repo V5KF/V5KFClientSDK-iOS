@@ -41,6 +41,10 @@
  *  连接建立成功
  */
 - (void)onConnect;
+/**
+ *  连接建立成功,并返回获取到的未读消息
+ */
+- (void)onConnectWithUnreadCount:(NSInteger)count;
 
 /**
  *  链接断开

@@ -47,7 +47,12 @@
     config.nickname = @"ios_sdk_test_v5kf";
     config.gender = 1; //性别：0-未知 1－男 2－女
     //config.avatar = @"http://debugimg-10013434.image.myqcloud.com/fe1382d100019cfb572b1934af3d2c04/thumbnail"; //客户头像URL
-    //config.openId = @"ios-customer-id-for-test"; //用户唯一ID,区分不同登录用户(替代1.2.0之前版本的uid),不设置则系统自动生成此值,可透传到座席端,尽量不要携带特殊字符（ $&+,/:;=?@%#[]以及空格之类的字符，有则会经过urlencode）
+    /**
+     * 用户唯一ID,区分不同登录用户(替代1.2.0之前版本的uid),不设置则系统自动生成此值,可透传到座席端,尽量不要携带特殊字符（ $&+,/:;=?@%#[]以及空格之类的字符，有则会经过urlencode）
+     * 若您是旧版本SDK用户，只是想升级，为兼容旧版，避免客户信息改变可继续使用config.uid，可不用openId
+     */
+    config.openId = @"ios_sdk_test_v5kf";
+    //config.uid = @"ios_sdk_test_v5kf"; // 新版本建议使用openId替代
     //config.deviceToken = @"设备的deviceToken";
     
     // 添加自定义用户信息NSDictionary,(仅在开启对话页面前设置生效)，示例如下：
@@ -62,9 +67,9 @@
     // 允许并设置消息铃声SystemSoundID
     chatViewController.allowSound = YES;
     chatViewController.soundID = 1007;
-    // 允许发送语音
+    // 允许发送语音(默认YES)
     chatViewController.enableVoiceRecord = YES;
-    // 允许显示头像
+    // 允许显示头像(默认YES)
     chatViewController.showAvatar = YES;
     // 头像圆角
     chatViewController.avatarRadius = 6;

@@ -124,6 +124,8 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
 @property (nonatomic, assign) BOOL showAvatar;
 //头像圆角0～20(矩形－>圆形)
 @property (nonatomic, assign) CGFloat avatarRadius;
+/* 优先显示未读消息，当设置的开场显示历史消息最大条数小于当前获取到的离线未读消息时，也要将未读消息显示完 */
+@property (nonatomic, assign) BOOL unreadShowFirst;
 
 /**
  *  下方为UI相关控件，可选择性修改界面参数，如背景色
