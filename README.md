@@ -128,7 +128,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 ```
 platform :ios, '8.0'
 
-pod 'V5ClientSDK', '~> 1.2.4'
+pod 'V5ClientSDK', '~> 1.2.5'
 ```
 
 接着pod安装 即可：
@@ -407,6 +407,20 @@ self.navigationItem.backBarButtonItem = myBackItem;
 * 服务状态改变(正在排队、机器人服务、人工服务) *
 * @param status KV5ClientServingStatus */
 - (void)clientViewController:(V5ChatViewController *)chatVC ServingStatusChange:(KV5ClientServingStatus)status;
+
+/**
+ *  点击底部功能按钮
+ *
+ *  @param tag 点击按钮的标签，包括（可到VClient.bundle/v5_menu_function.plist自定义增减）：
+ *      HOT_QUESTION        //常见问题
+ *      RELATIVE_QUESTION   //相关问题
+ *      PICTURE             //图片
+ *      CAMERA              //拍照
+ *      TRANSFER_WORKER     //人工客服
+ *
+ *  @return 返回是否消费此事件(返回YES则不响应默认点击效果，由此回调处理)
+ */
+- (BOOL)clientViewController:(V5ChatViewController * _Nonnull)chatVC selectMoreFunctionOfTag:(NSString * _Nonnull)tag;
 @end
 ```
 
@@ -748,3 +762,6 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 
 - 2017/04/25 文档版本 Ver0.8_r170425，SDK 版本 v1.2.4(r170425)
 	1. 【修复】增加文本消息内相关问题点击发送，修复点击消息内链接无效问题。
+
+- 2017/05/04 文档版本 Ver0.8_r170504，SDK 版本 v1.2.5(r170504)
+	1. 【增加】添加页面“+”按钮打开页面功能图标点击事件回调，提供自定义处理事件。

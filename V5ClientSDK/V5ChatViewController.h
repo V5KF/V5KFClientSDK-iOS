@@ -96,6 +96,20 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  */
 - (void)clientViewController:(V5ChatViewController * _Nonnull)chatVC ServingStatusChange:(KV5ClientServingStatus)status;
 
+/**
+ *  点击底部功能按钮
+ *
+ *  @param tag 点击按钮的标签，包括（可到VClient.bundle/v5_menu_function.plist自定义增减）：
+ *      HOT_QUESTION        //常见问题
+ *      RELATIVE_QUESTION   //相关问题
+ *      PICTURE             //图片
+ *      CAMERA              //拍照
+ *      TRANSFER_WORKER     //人工客服
+ *
+ *  @return 返回是否消费此事件(返回YES则不响应默认点击效果，由此回调处理)
+ */
+- (BOOL)clientViewController:(V5ChatViewController * _Nonnull)chatVC selectMoreFunctionOfTag:(NSString * _Nonnull)tag;
+
 @end
 
 @interface V5ChatViewController : UIViewController <V5MessageDelegate>
