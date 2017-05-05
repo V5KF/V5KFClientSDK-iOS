@@ -262,7 +262,7 @@
 - (BOOL)clientViewController:(V5ChatViewController *)chatVC selectMoreFunctionOfTag:(NSString *)tag {
     if ([tag isEqualToString:@"TRANSFER_WORKER"]) { // 常见问题
         // 转指定客服，需提供组Id和客服Id，为0则不指定
-        [[V5ClientAgent shareClient] humanServiceOfGroupId:100003 workerId:132916];
+        [[V5ClientAgent shareClient] humanServiceOfGroupId:0 workerId:0];
         // 返回YES来拦截SDK内默认的实现
         return YES;
     }
