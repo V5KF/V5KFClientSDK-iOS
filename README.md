@@ -249,6 +249,29 @@ self.navigationItem.backBarButtonItem = myBackItem;
 [self.navigationController pushViewController:(UIViewController *)chatViewController animated:YES];
 ```
 
+ 如果SDK使用在iPad里，启动会话界面可采用`PopoverViewController`方式，以及限制横屏状态的处理方式，具体配置如下：
+
+```objective-c
+// 页面呈现方式presentType默认PresentType_Push, PopoverViewController下改为PresentType_Popover
+chatViewController.presentType = PresentType_Popover;
+chatViewController.view.transform = CGAffineTransformMakeScale(0.7, 0.7);
+
+UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:chatViewController];
+[popover setBackgroundColor:[UIColor colorWithRed:235.0/255 green:235.0/255 blue:235.0/255 alpha:1]];
+popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width, chatViewController.view.frame.size.height);
+[popover presentPopoverFromRect:CGRectMake(0,618,1024,50) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+
+// 需要**限制横屏**打开时(UIInterfaceOrientationMaskLandscape)，为解决发送图片时选择图库打开页面异常问题，需要在AppDelegate做如下处理
+/* 需要手动控制屏幕方向时使用，比如iPad横屏情况 */
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if ([V5ClientAgent shareClient].isPhotoLibrary) { //必须,否则打开图库异常
+        return UIInterfaceOrientationMaskAll;
+    } else {
+        return UIInterfaceOrientationMaskLandscape;
+    }
+}
+```
+
 此外，页面的代理包含的方法如下，有相应需求的可使用，非必须:
 
 ```objective-c
