@@ -208,3 +208,17 @@ popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width
     }
 }
 ```
+
+### 4.4 生命周期处理
+在使用 UI 集成的 SDK 中，需要在 `AppDelegate` 中添加下面代码:
+	
+```objective-c
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+	//退出到后台时，通知 SDK 用户离线
+	[[V5ClientAgent shareClient] onApplicationDidEnterBackground]; 
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+	//移动到前台时，通知 SDK 用户上线并连接
+	[[V5ClientAgent shareClient] onApplicationWillEnterForeground]; }
+```
