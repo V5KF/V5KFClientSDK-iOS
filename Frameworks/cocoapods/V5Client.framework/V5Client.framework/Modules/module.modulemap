@@ -1,0 +1,6 @@
+framework module V5Client {
+  umbrella header "V5Client.h"
+
+  export *
+  module * { export * }
+}
