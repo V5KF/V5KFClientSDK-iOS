@@ -22,7 +22,7 @@
 /**
  *  从字典构造消息对象
  *
- *  @param jsonData
+ *  @param jsonData json
  *
  *  @return V5Message
  */

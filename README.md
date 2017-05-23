@@ -1,3 +1,4 @@
+
 # V5KFClientSDK-iOS
 > 此为V5KF智能客服iOS客户端SDK快速接入文档，包含接入客服系统的基本配置和代码接口，更全面详细的文档可参考[这里](./README.full.md)
 
@@ -96,6 +97,8 @@ pod 'V5ClientSDK', '~> 1.2.6'
 <string>Choose photo</string> 
 <key>NSCameraUsageDescription</key> 
 <string>Take pictures</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Record voice</string>
 ```
 
 ## 4 SDK接口快速集成
@@ -109,7 +112,6 @@ pod 'V5ClientSDK', '~> 1.2.6'
     // Override point for customization after application launch. 
     // 初始化SDK
     [V5ClientAgent initWithSiteId:@"10000"
-                          account:@"v5kf"
                             appId:@"19cfb0800f474"
                    exceptionBlock:nil];
     return YES;
@@ -155,7 +157,7 @@ chatViewController.hidesBottomBarWhenPushed = YES;
 
 /* 下面为会话界面配置，非必须，可根据需求自定义配置，均有默认值 */
 // 会话界面的代理V5ChatViewDelegate
-chatViewController.delegate = self; 
+//chatViewController.delegate = self; 
 // 设备的ID(也可在config设置deviceToken),有选择推送功能的需要配置
 // chatViewController.deviceToken = @"设备的deviceToken";
 // 允许并设置消息铃声SystemSoundID 

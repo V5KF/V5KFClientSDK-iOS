@@ -189,7 +189,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  获得开场消息
  *
  *  @param mode  KV5ClientOpenMode 开场白模式
- *  @param patam 参数可为nil,当mode为ClientOpenModeCommand时不为nil
+ *  @param param 参数可为nil,当mode为ClientOpenModeCommand时不为nil
  */
 - (void)getOpeningMessageOfMode:(KV5ClientOpenMode)mode withParam:(nullable NSString *)param;
 

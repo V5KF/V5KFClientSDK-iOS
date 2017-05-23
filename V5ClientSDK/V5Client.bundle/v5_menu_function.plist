@@ -10,7 +10,7 @@
 		<key>name</key>
 		<string>常见问题</string>
 		<key>image</key>
-		<string>V5Client.bundle/v5_icon_ques</string>
+		<string>v5_icon_ques</string>
 	</dict>
 	<dict>
 		<key>enable</key>
@@ -20,7 +20,7 @@
 		<key>name</key>
 		<string>相关问题</string>
 		<key>image</key>
-		<string>V5Client.bundle/v5_icon_relative_ques</string>
+		<string>v5_icon_relative_ques</string>
 	</dict>
 	<dict>
 		<key>enable</key>
@@ -30,7 +30,7 @@
 		<key>name</key>
 		<string>图片</string>
 		<key>image</key>
-		<string>V5Client.bundle/v5_icon_photo</string>
+		<string>v5_icon_photo</string>
 	</dict>
 	<dict>
 		<key>enable</key>
@@ -40,7 +40,7 @@
 		<key>name</key>
 		<string>拍照</string>
 		<key>image</key>
-		<string>V5Client.bundle/v5_icon_camera</string>
+		<string>v5_icon_camera</string>
 	</dict>
 	<dict>
 		<key>enable</key>
@@ -50,7 +50,7 @@
 		<key>name</key>
 		<string>人工客服</string>
 		<key>image</key>
-		<string>V5Client.bundle/v5_icon_worker</string>
+		<string>v5_icon_worker</string>
 	</dict>
 </array>
 </plist>

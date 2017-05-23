@@ -171,6 +171,8 @@ pod 'V5ClientSDK', '~> 1.2.6'
 <string>Choose photo</string> 
 <key>NSCameraUsageDescription</key> 
 <string>Take pictures</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Record voice</string>
 ```
 
 ## 5 使用SDK提供的UI快速集成
@@ -183,7 +185,6 @@ pod 'V5ClientSDK', '~> 1.2.6'
     // Override point for customization after application launch. 
     // 初始化SDK
     [V5ClientAgent initWithSiteId:@"10000"
-                          account:@"v5kf"
                             appId:@"19cfb0800f474"
                    exceptionBlock:nil];
     return YES;

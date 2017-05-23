@@ -156,7 +156,7 @@ typedef NS_ENUM(NSInteger, KV5PresentType) {
  *  设置开场方式与参数，需在进入会话前设置
  *
  *  @param mode  KV5ClientOpenMode
- *  @param patam 参数可为nil,当mode为ClientOpenModeCommand时不为nil
+ *  @param param 参数可为nil,当mode为ClientOpenModeCommand时不为nil
  */
 - (void)setClientOpenMode:(KV5ClientOpenMode)mode withParam:(nullable NSString *)param;
 
