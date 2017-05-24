@@ -245,5 +245,6 @@ popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	//移动到前台时，通知 SDK 用户上线并连接
-	[[V5ClientAgent shareClient] onApplicationWillEnterForeground]; }
+	[[V5ClientAgent shareClient] onApplicationWillEnterForeground];
+}
 ```

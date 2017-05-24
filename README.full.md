@@ -391,7 +391,8 @@ popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	//移动到前台时，通知 SDK 用户上线并连接
-	[[V5ClientAgent shareClient] onApplicationWillEnterForeground]; }
+	[[V5ClientAgent shareClient] onApplicationWillEnterForeground];
+}
 ```
 
 此外，不使用客服功能时建议关闭会话连接以节省资源，建议在开启会话界面的前一个界面的 `viewDidAppear:`方法中调用关闭客服的方法:
