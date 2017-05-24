@@ -51,7 +51,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入（此处导入的SDK为静态库，动态库请参考[2.5](#25-动态库)）：
 
 ```
-platform :ios, '8.0'
+platform :ios, '7.0'
 
 pod 'V5ClientSDK'
 ```
