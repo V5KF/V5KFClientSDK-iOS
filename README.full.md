@@ -14,6 +14,7 @@
   	 - [4.2.2 Swift 项目](#422-swift项目)
   	 - [4.2.3 引入依赖库](#423-引入依赖库)
   	 - [4.2.4 CocoaPods导入](#424-cocoapods导入)
+  	 - [4.2.5 动态库](#425-动态库)
   - [4.3 Info.plist 配置](#43-infoplist配置)
   	 - [4.3.1 ATS](#431-ats)
   	 - [4.3.2 权限](#432-权限)
@@ -124,7 +125,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 - MediaPlayer.framework
 
 ##### 4.2.4 CocoaPods导入
-使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入：
+使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入（此处导入的SDK为静态库，动态库请参考[4.2.5](#425-动态库)）：
 
 ```
 platform :ios, '8.0'
@@ -143,6 +144,31 @@ pod 'V5ClientSDK', '~> 1.2.7'
 如果运行以上命令，没有搜到或者搜不到最新版本，您可以运行以下命令，更新一下您本地的 CocoaPods 源列表：
 
 	pod repo update  
+
+##### 4.2.5 动态库
+
+为应对不断发展的开发需求，本SDK自1.2.7版本开始提供动态库解决方案，命名为`V5Client.framework`，并支持使用Cocoapods和Carthage导入，静态库版本亦会继续支持。
+
+- 使用CocoaPods导入
+
+```
+platform :ios, '8.0'
+use_frameworks!
+
+target 'ClientDemo' do
+  pod 'V5Client'
+end
+```
+
+target那里的`ClientDemo`改为你的target。
+
+- 使用Carthage引入
+
+```
+github "V5KF/V5KFClientSDK-iOS"
+```
+
+然后把`Carthage/Build/iOS/V5Client.framework`拖入项目配置的`General`->`Embedded Binaries`，并选择`Copy items if needed`。
 
 ### 4.3 Info.plist配置
 #### 4.3.1 ATS
