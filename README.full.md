@@ -130,7 +130,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 ```
 platform :ios, '8.0'
 
-pod 'V5ClientSDK', '~> 1.2.7'
+pod 'V5ClientSDK'
 ```
 
 接着pod安装 即可：
@@ -826,3 +826,9 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 
 - 2017/05/09 文档版本 Ver0.8_r170509，SDK 版本 v1.2.6(r170509)
 	1. 【修复】修复iPad横屏限制情况打开相册异常。
+
+- 2017/05/24 文档版本 Ver0.8_r170524，SDK 版本 v1.2.8(r170524)
+	1. 【新增】新增动态库支持（V5Client.framework），支持CocoaPods和Carthage导入。
+	2. 【修复】静态库V5ClientSDK支持iOS 7.0。
+	3. 更新README：动态库导入说明。
+

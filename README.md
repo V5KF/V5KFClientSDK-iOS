@@ -53,7 +53,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 ```
 platform :ios, '8.0'
 
-pod 'V5ClientSDK', '~> 1.2.7'
+pod 'V5ClientSDK'
 ```
 
 接着pod安装 即可：
@@ -72,7 +72,7 @@ pod 'V5ClientSDK', '~> 1.2.7'
 
 为应对不断发展的开发需求，本SDK自1.2.7版本开始提供动态库解决方案，命名为`V5Client.framework`，并支持使用Cocoapods和Carthage导入，静态库版本亦会继续支持。
 
-- 使用CocoaPods导入
+#### 使用CocoaPods导入
 
 ```
 platform :ios, '8.0'
@@ -85,7 +85,7 @@ end
 
 target那里的`ClientDemo`改为你的target
 
-- 使用Carthage引入
+#### 使用Carthage引入
 
 ```
 github "V5KF/V5KFClientSDK-iOS"
