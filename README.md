@@ -211,31 +211,42 @@ self.navigationItem.backBarButtonItem = myBackItem;
 ```
 
 
-如果SDK使用在iPad里，启动会话界面可采用`PopoverViewController`方式，以及限制横屏状态的处理方式，具体配置如下：
+如果SDK使用在iPad里，启动会话界面可采用`UIPopoverPresentationController`方式，以及限制横屏状态的处理方式，具体配置如下：
 
 ```objective-c
 // 页面呈现方式presentType默认PresentType_Push, PopoverViewController下改为PresentType_Popover
 chatViewController.presentType = PresentType_Popover;
-chatViewController.view.transform = CGAffineTransformMakeScale(0.7, 0.7);
+chatViewController.view.transform = CGAffineTransformMakeScale(0.8, 0.8); //缩小页面内容
 
-UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:chatViewController];
-[popover setBackgroundColor:[UIColor colorWithRed:235.0/255 green:235.0/255 blue:235.0/255 alpha:1]];
-popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width, chatViewController.view.frame.size.height);
-[popover presentPopoverFromRect:CGRectMake(0,618,1024,50) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+//使用UIPopoverPresentationController开启对话
+chatViewController.modalPresentationStyle = UIModalPresentationPopover;
+chatViewController.preferredContentSize = CGSizeMake(400, 500);
+UIPopoverPresentationController* popover = chatViewController.popoverPresentationController;
+//设置弹出的基准视图
+popover.sourceView = self.button;
+popover.sourceRect = self.button.bounds;//打开页面的入口按钮的bunds
+popover.delegate = self;
+[self presentViewController:chatViewController animated:YES completion:nil];
 
-// 需要**限制横屏**打开时(UIInterfaceOrientationMaskLandscape)，为解决发送图片时选择图库打开页面异常问题，需要在AppDelegate做如下处理
+// 或者使用`UIPopoverController`，iOS9.0以后不再建议使用
+// UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:chatViewController];
+// [popover setBackgroundColor:[UIColor colorWithRed:235.0/255 green:235.0/255 blue:235.0/255 alpha:1]];
+// popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width, chatViewController.view.frame.size.height);
+// [popover presentPopoverFromRect:CGRectMake(0,618,1024,50) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+
 /* 需要手动控制屏幕方向时使用，比如iPad横屏情况 */
+// 需要**限制横屏**打开时(UIInterfaceOrientationMaskLandscape)，为解决发送图片时选择图库打开页面异常问题，需要在AppDelegate做如下处理
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     if ([V5ClientAgent shareClient].isPhotoLibrary) { //必须,否则打开图库异常
         return UIInterfaceOrientationMaskAll;
     } else {
-        return UIInterfaceOrientationMaskLandscape;
+        return UIInterfaceOrientationMaskLandscape;//or UIInterfaceOrientationMaskAll 允许全部屏幕方向
     }
 }
 ```
 
 ### 4.4 生命周期处理
-在使用 UI 集成的 SDK 中，需要在 `AppDelegate` 中添加下面代码:
+在使用 UI 集成的 SDK 中，**【必须】**在 `AppDelegate` 中添加下面代码:
 	
 ```objective-c
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -248,3 +259,32 @@ popover.popoverContentSize = CGSizeMake(chatViewController.view.frame.size.width
 	[[V5ClientAgent shareClient] onApplicationWillEnterForeground];
 }
 ```
+
+此外，不使用客服功能时需要关闭会话服务以节省资源并避免客户离线的状态未更新到座席（已配置离线推送情况下还会影响消息推送）。在使用导航模式`pushViewController`方式打开时，页面返回时SDK内置V5ChatViewController会**自动调用**`[[V5ClientAgent shareClient] stopClient]`关闭会话服务，则无须参考以下内容，若开启页面的方式不是push或者修改了导航栏返回按钮，则必须**【手动调用】**来关闭会话。
+
+下面列举几种需要手动关闭会话的情况：
+
+> 修改或自定义了导航栏按钮或使用present弹出页面的，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
+
+```objective-c
+- (void)viewDidAppear:(BOOL)animated { // 前一 viewController 中 
+  // 不使用客服功能时(在会话 VC 关闭后)退出消息客户端 
+  if ([V5ClientAgent shareClient].isConnected) {
+    [[V5ClientAgent shareClient] stopClient];
+  }
+}
+```
+
+> 以`UIPopoverPresentationController`方式打开的，则需要通过实现`UIPopoverPresentationControllerDelegate`的`popoverPresentationControllerDidDismissPopover:`来调用`[[V5ClientAgent shareClient] stopClient];`:
+
+```objective-c
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController {
+    // 不使用客服功能时(在会话 VC 关闭后)退出消息客户端 
+    if ([V5ClientAgent shareClient].isConnected) {
+        [[V5ClientAgent shareClient] stopClient];
+    }
+}
+```
+
+> 此外，使用`UIPopoverController`或者其他方式开启的也是同理，需要手动关闭会话。
+
