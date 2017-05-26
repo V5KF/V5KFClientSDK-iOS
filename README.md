@@ -246,7 +246,7 @@ popover.delegate = self;
 ```
 
 ### 4.4 生命周期处理
-在使用 UI 集成的 SDK 中，**【必须】**在 `AppDelegate` 中添加下面代码:
+在使用 UI 集成的 SDK 中， **【必须】** 在 `AppDelegate` 中添加下面代码:
 	
 ```objective-c
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -260,7 +260,7 @@ popover.delegate = self;
 }
 ```
 
-此外，不使用客服功能时需要关闭会话服务以节省资源并避免客户离线的状态未更新到座席（已配置离线推送情况下还会影响消息推送）。在使用导航模式`pushViewController`方式打开时，页面返回时SDK内置V5ChatViewController会**自动调用**`[[V5ClientAgent shareClient] stopClient]`关闭会话服务，则无须参考以下内容，若开启页面的方式不是push或者修改了导航栏返回按钮，则必须**【手动调用】**来关闭会话。
+此外，不使用客服功能时需要关闭会话服务以节省资源并避免客户离线的状态未更新到座席（已配置离线推送情况下还会影响消息推送）。在使用导航模式`pushViewController`方式打开时，页面返回时SDK内置V5ChatViewController会 **自动调用** `[[V5ClientAgent shareClient] stopClient]`关闭会话服务，则无须参考以下内容，若开启页面的方式不是push或者修改了导航栏返回按钮，则必须 **【手动调用】** 来关闭会话。
 
 下面列举几种需要手动关闭会话的情况：
 
