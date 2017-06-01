@@ -885,3 +885,6 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 	2. 【修复】静态库V5ClientSDK支持iOS 7.0。
 	3. 更新README：动态库导入说明。
 
+- 2017/06/01 文档版本 Ver0.8_r17601，SDK 版本 v1.2.9(r170601)
+	1. 增加push模式下使用内部webview浏览链接。
+	2. 使用NSURLSession替代遗留的NSURLConnection。
