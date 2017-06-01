@@ -100,17 +100,19 @@ github "V5KF/V5KFClientSDK-iOS"
 由于 iOS 9 的新特性默认使用 `ATS`，所有网络请求都需要在安全的连接下(当前 App Store 尚未强制使用iOS 9这一新特性)，所以一些不兼容的服务需要进行额外的配置，本SDK使用到了语音和图片服务的 webservice 接口，需在 `Info.plist` 添加下述配置:
 
 ```
-<key>NSAppTransportSecurity</key> 
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-       <true/>
-    </dict>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSAllowsArbitraryLoadsInWebContent</key>
+    <true/>
+  </dict>
 ```
 
 关于这一特性的详细说明和解决方案可参考:
 [https://github.com/ChenYilong/iOS9AdaptationTips](https://github.com/ChenYilong/iOS9AdaptationTips)
 
-**注:** 本SDK 1.1.10 以上版本已完全兼容 `HTTPS`，若无特殊需求，无需配置此 ATS 项， 可直接采用 https 方式连接，SDK 默认会将访问的网络图片(比如用户头像)和其他网络请 求进行自动转为 `https` 方式访问，若目标站点未支持 https 仍需要 http 访问，可通过设置` [V5ClientAgent shareClient].config.autoSSL = NO `来取消自动转 `https`，并自行配置好对应的 `ATS` 选项。
+**注:** 本SDK 1.1.10 以上版本已完全兼容 `HTTPS`，若无特殊需求，无需配置 ATS 项`NSAllowsArbitraryLoads`，但仍须配置`NSAllowsArbitraryLoadsInWebContent`。原因：本SDK在 1.1.10 版本开始支持 https，SDK 默认会将访问的网络图片(比如用户头像)和其他网络请 求进行自动转为 `https` 方式访问，若目标站点未支持 https 仍需要 http 访问，可通过设置` [V5ClientAgent shareClient].config.autoSSL = NO `来取消自动转 `https`，并自行配置好对应的 `ATS` 选项。另外1.2.9版本开始支持webview加载网页，网页URL无法确保支持https，故仍需要配置`NSAllowsArbitraryLoadsInWebContent`。
 
 ### 3.2 权限
 由于 SDK 中使用到相册和相机，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
