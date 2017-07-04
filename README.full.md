@@ -553,6 +553,60 @@ popover.delegate = self;
 }
 ```
 
++ **3.解决第三方输入框兼容问题**
+
+使用了`IQKeyboardManager`的App在接入本SDK后，对话界面弹出软键盘时会有异常，这时只需要关闭IQKeyboardManager的功能即可，具体方法如下：
+
+开启会话节面前需要设置`V5ChatViewDelegate`代理：
+
+```objective-c
+// 会话界面的代理V5ChatViewDelegate
+chatViewController.delegate = self;
+```
+
+实现代理中关于生命周期的方法，分别在`clientViewWillAppear`和`clientViewWillDisappear`添加`IQKeyboardManager`的关闭和开启的代码：
+
+```objective-c
+#pragma mark - V5ChatViewDelegate -
+
+
+/**
+ *  即将打开会话视图
+ */
+- (void)clientViewWillAppear {
+    //取消输入键盘插件
+    [IQKeyboardManager sharedManager].enable = NO;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+}
+
+/**
+ *  会话视图打开后
+ */
+- (void)clientViewDidAppear {
+}
+
+/**
+ *  即将关闭会话视图
+ */
+- (void)clientViewWillDisappear {
+    //开启输入键盘插件
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+}
+
+/**
+ *  关闭会话视图后
+ */
+- (void)clientViewDidDisappear {
+}
+
+/**
+ *  会话连接成功
+ */
+- (void)onClientViewConnect {
+}
+```
+
 ### 5.6 会话界面自定义
 参考 [5.3](#53-启动会话界面) 中，可设置是否允许发送语音和显示头像，此外会话界面中加号打开的功能面版亦支持自定义。
 通过修改V5Client.bundle中v5\_menu\_function.plist中对应项的`enable`为`false`可以控制对应功能项按钮是否显示。
