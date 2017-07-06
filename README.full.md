@@ -941,10 +941,14 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 	2. 【修复】静态库V5ClientSDK支持iOS 7.0。
 	3. 更新README：动态库导入说明。
 
-- 2017/06/01 文档版本 Ver0.8_r17601，SDK 版本 v1.2.9(r170601)
+- 2017/06/01 文档版本 Ver0.8_r170601，SDK 版本 v1.2.9(r170601)
 	1. 增加push模式下使用内部webview浏览链接。
 	2. 使用NSURLSession替代遗留的NSURLConnection。
 
-- 2017/06/02 文档版本 Ver1.0_r17602，SDK 版本 v1.3.0(r170602)
+- 2017/06/02 文档版本 Ver1.0_r170602，SDK 版本 v1.3.0(r170602)
 	1. 修改iOS7继续使用`UIAlertView`和`UIActionSheet`，iOS8以上使用`UIAlertController`替换。
 	2. 修复webview浏览退出`networkActivityIndicatorVisible`仍显示问题。
+
+- 2017/07/06 文档版本 Ver1.0_r170706，SDK 版本 v1.3.1(r170706)
+	1. 增加邮箱链接的识别和自定义点击操作支持。
+

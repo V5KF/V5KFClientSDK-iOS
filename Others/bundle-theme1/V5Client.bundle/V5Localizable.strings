@@ -16,10 +16,12 @@
 "v5_alert_no_piclibrary" = "相册访问权限受限，请到设置中开启";
 "v5_alert_no_browser" = "打开浏览器失败";
 "v5_alert_no_phone" = "拨号失败";
+"v5_alert_no_email" = "打开电子邮箱失败";
 "v5_save" = "保存";
 "v5_copy" = "拷贝";
 "v5_copy_link" = "拷贝链接";
 "v5_open_in_safari" = "在Safari中打开";
+"v5_open_email" = "打开电子邮箱";
 "v5_dail_number" = "直接拨打";
 "v5_toast_no_empty" = "输入不能为空";
 "v5_toast_send_success" = "发送成功";

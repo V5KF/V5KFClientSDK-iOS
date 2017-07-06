@@ -93,7 +93,9 @@ typedef NS_ENUM(NSInteger, KV5LinkType) {
     // 图文链接
     LinkTypeArticle = 1,
     // 电话号码
-    LinkTypePhoneNumber = 2
+    LinkTypePhoneNumber = 2,
+    // 邮箱
+    LinkTypeEmail = 3
 };
 
 /**
