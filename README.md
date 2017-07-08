@@ -47,7 +47,10 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 - Security.framework
 - MediaPlayer.framework
 
-### 2.4 CocoaPods导入
+### 2.4 静态库
+
+> 注: 针对 iOS 7+
+
 使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入（此处导入的SDK为静态库，动态库请参考[2.5](#25-动态库)）：
 
 ```
@@ -69,6 +72,8 @@ pod 'V5ClientSDK'
 	pod repo update  
 
 ### 2.5 动态库
+
+> 注: 针对 iOS 8+
 
 为应对不断发展的开发需求，本SDK自1.2.7版本开始提供动态库解决方案，命名为`V5Client.framework`，并支持使用Cocoapods和Carthage导入，静态库版本亦会继续支持。
 
@@ -115,7 +120,7 @@ github "V5KF/V5KFClientSDK-iOS"
 **注:** 本SDK 1.1.10 以上版本已完全兼容 `HTTPS`，若无特殊需求，无需配置 ATS 项`NSAllowsArbitraryLoads`，但仍须配置`NSAllowsArbitraryLoadsInWebContent`。原因：本SDK在 1.1.10 版本开始支持 https，SDK 默认会将访问的网络图片(比如用户头像)和其他网络请 求进行自动转为 `https` 方式访问，若目标站点未支持 https 仍需要 http 访问，可通过设置` [V5ClientAgent shareClient].config.autoSSL = NO `来取消自动转 `https`，并自行配置好对应的 `ATS` 选项。另外1.2.9版本开始支持webview加载网页，网页URL无法确保支持https，故仍需要配置`NSAllowsArbitraryLoadsInWebContent`。
 
 ### 3.2 权限
-由于 SDK 中使用到相册和相机，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
+由于 SDK 中使用到相册、相机还有录音，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
 
 ```
 <key>NSPhotoLibraryUsageDescription</key> 

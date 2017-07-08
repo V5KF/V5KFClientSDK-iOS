@@ -13,7 +13,7 @@
   	 - [4.2.1 Objective-C 项目](#421-objective-c项目)
   	 - [4.2.2 Swift 项目](#422-swift项目)
   	 - [4.2.3 引入依赖库](#423-引入依赖库)
-  	 - [4.2.4 CocoaPods导入](#424-cocoapods导入)
+  	 - [4.2.4 静态库](#424-静态库)
   	 - [4.2.5 动态库](#425-动态库)
   - [4.3 Info.plist 配置](#43-infoplist配置)
   	 - [4.3.1 ATS](#431-ats)
@@ -124,7 +124,10 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 - Security.framework
 - MediaPlayer.framework
 
-##### 4.2.4 CocoaPods导入
+##### 4.2.4 静态库
+
+> 注: 针对 iOS 7+
+
 使用CocoaPods管理依赖库的可以更方便的导入SDK。只需要在 `Podfile` 中加入（此处导入的SDK为静态库，动态库请参考[4.2.5](#425-动态库)）：
 
 ```
@@ -192,7 +195,7 @@ github "V5KF/V5KFClientSDK-iOS"
 
 #### 4.3.2 权限
 
-由于 SDK 中使用到相册和相机，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
+由于 SDK 中使用到相册、相机还有录音，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
 
 ```
 <key>NSPhotoLibraryUsageDescription</key> 
