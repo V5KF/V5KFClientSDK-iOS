@@ -321,6 +321,31 @@ popover.delegate = self;
 }
 ```
 
+若开启对话页面非导航模式，则需使用present方式打开
+
+```objective-c
+@interface ViewController () {
+    // 添加的导航控制器
+    UINavigationController *navVC;
+}
+@end
+
+//......
+
+// 若非导航模式，使用present方式开启，添加导航控制器包裹chatViewController，并加入关闭页面所需的按钮
+navVC = [[UINavigationController alloc] initWithRootViewController:chatViewController];
+chatViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeChat:)];
+[self presentViewController:navVC animated:YES completion:nil];
+
+//......
+
+// done按钮点击关闭页面
+- (void)closeChat:(id)sender {
+    [navVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+```
+
 此外，页面的代理包含的方法如下，有相应需求的可使用，非必须:
 
 ```objective-c
@@ -408,7 +433,7 @@ popover.delegate = self;
 
 下面列举几种需要手动关闭会话的情况：
 
-> 修改或自定义了导航栏按钮或使用present弹出页面的，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
+> 修改或自定义了导航栏按钮或使用present弹出页面的(建议全部手动调用下面的方法，避免未关闭连接导致问题)，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
 
 ```objective-c
 - (void)viewDidAppear:(BOOL)animated { // 前一 viewController 中 
@@ -954,4 +979,7 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 
 - 2017/07/06 文档版本 Ver1.0_r170706，SDK 版本 v1.3.1(r170706)
 	1. 增加邮箱链接的识别和自定义点击操作支持。
+
+- 2017/07/24 文档版本 Ver1.0_r170724，SDK 版本 v1.3.2(r170724)
+  1. 修复Uinity启动页面后dealloc时未释放observer的问题。
 

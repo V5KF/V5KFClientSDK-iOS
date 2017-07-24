@@ -217,6 +217,31 @@ self.navigationItem.backBarButtonItem = myBackItem;
 [self.navigationController pushViewController:(UIViewController *)chatViewController animated:YES];
 ```
 
+若开启对话页面非导航模式，则需使用present方式打开
+
+```objective-c
+@interface ViewController () {
+    // 添加的导航控制器
+    UINavigationController *navVC;
+}
+@end
+
+//......
+
+// 若非导航模式，使用present方式开启，添加导航控制器包裹chatViewController，并加入关闭页面所需的按钮
+navVC = [[UINavigationController alloc] initWithRootViewController:chatViewController];
+chatViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeChat:)];
+[self presentViewController:navVC animated:YES completion:nil];
+
+//......
+
+// done按钮点击关闭页面
+- (void)closeChat:(id)sender {
+    [navVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+```
+
 
 如果SDK使用在iPad里，启动会话界面可采用`UIPopoverPresentationController`方式，以及限制横屏状态的处理方式，具体配置如下：
 
@@ -271,7 +296,7 @@ popover.delegate = self;
 
 下面列举几种需要手动关闭会话的情况：
 
-> 修改或自定义了导航栏按钮或使用present弹出页面的，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
+> 修改或自定义了导航栏按钮或使用present弹出页面的(建议全部手动调用下面的方法，避免未关闭连接导致问题)，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
 
 ```objective-c
 - (void)viewDidAppear:(BOOL)animated { // 前一 viewController 中 
@@ -310,7 +335,6 @@ chatViewController.delegate = self;
 
 ```objective-c
 #pragma mark - V5ChatViewDelegate -
-
 
 /**
  *  即将打开会话视图
