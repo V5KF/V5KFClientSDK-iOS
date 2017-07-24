@@ -238,6 +238,9 @@ chatViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
 // done按钮点击关闭页面
 - (void)closeChat:(id)sender {
     [navVC dismissViewControllerAnimated:YES completion:nil];
+    if ([V5ClientAgent shareClient].isConnected) {
+      [[V5ClientAgent shareClient] stopClient];
+    }
 }
 
 ```
@@ -292,11 +295,11 @@ popover.delegate = self;
 }
 ```
 
-此外，不使用客服功能时需要关闭会话服务以节省资源并避免客户离线的状态未更新到座席（已配置离线推送情况下还会影响消息推送）。在使用导航模式`pushViewController`方式打开时，页面返回时SDK内置V5ChatViewController会 **自动调用** `[[V5ClientAgent shareClient] stopClient]`关闭会话服务，则无须参考以下内容，若开启页面的方式不是push或者修改了导航栏返回按钮，则必须 **【手动调用】** 来关闭会话。
+此外，不使用客服功能时需要关闭会话服务以节省资源并避免客户离线的状态未更新到座席（已配置离线推送情况下还会影响消息推送）。
 
-下面列举几种需要手动关闭会话的情况：
+下面列举几种情况下关闭会话的示例：
 
-> 修改或自定义了导航栏按钮或使用present弹出页面的(建议全部手动调用下面的方法，避免未关闭连接导致问题)，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
+> 使用push推出页面的，在开启会话界面的前一个界面的 `viewDidAppear:`方法中手动调用关闭客服的方法:
 
 ```objective-c
 - (void)viewDidAppear:(BOOL)animated { // 前一 viewController 中 
@@ -304,6 +307,18 @@ popover.delegate = self;
   if ([V5ClientAgent shareClient].isConnected) {
     [[V5ClientAgent shareClient] stopClient];
   }
+}
+```
+
+> 使用present弹出页面的，在关闭页面的selector中调用
+
+```objective-c
+// done按钮点击关闭页面的selector
+- (void)closeChat:(id)sender {
+    [navVC dismissViewControllerAnimated:YES completion:nil];
+    if ([V5ClientAgent shareClient].isConnected) {
+      [[V5ClientAgent shareClient] stopClient];
+    }
 }
 ```
 
