@@ -76,6 +76,7 @@ pod 'V5ClientSDK'
 > 注: 针对 iOS 8+
 
 为应对不断发展的开发需求，本SDK自1.2.7版本开始提供动态库解决方案，命名为`V5Client.framework`，并支持使用Cocoapods和Carthage导入，静态库版本亦会继续支持。
+注：动态库使用时引用头文件方式为`#import <V5Client/V5ClientAgent.h>`。
 
 #### 使用CocoaPods导入
 
