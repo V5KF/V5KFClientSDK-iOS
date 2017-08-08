@@ -232,6 +232,10 @@ github "V5KF/V5KFClientSDK-iOS"
 //需要#import "V5ClientAgent.h"
 //获得V5ClientAgent配置对象
 V5Config *config = [V5ClientAgent shareClient].config;
+
+//用户信息单次设置即生效，更新用户信息或者切换用户时需调用shouldUpdateUserInfo，设置用户信息前调用
+//[config shouldUpdateUserInfo];
+
 //设置用户信息，坐席端可查看
 config.nickname = @"test-张三";
 config.gender = 1; //性别:0-未知 1-男 2-女
@@ -244,9 +248,6 @@ config.openId = @"ios-user-id-for-test";
 // 添加自定义用户信息NSDictionary,(仅在开启对话页面前设置生效)
 config.userInfo = @{@"商品名称": @"牛仔裤", 
 					@"商品价格": @"¥168.00"};
-
-//用户信息单次设置即生效，更新用户信息或者切换用户时需调用shouldUpdateUserInfo 
-//[config shouldUpdateUserInfo];
 ```
 
 ### 5.3 启动会话界面

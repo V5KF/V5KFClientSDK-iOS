@@ -28,6 +28,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    if ([V5ClientAgent shareClient].isConnected) {
+        [[V5ClientAgent shareClient] stopClient];
+    }
+}
+
 - (IBAction)clickStartClient:(id)sender {
     /**
      * 下面为会话界面配置选项，注释的为非必须
