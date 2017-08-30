@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopClient;
 
 /**
- *  添加自定义客户信息键值对
+ *  添加自定义客户信息键值对（可用于对话中）
  *
  *  @param info NSDictionary
  *      示例：
