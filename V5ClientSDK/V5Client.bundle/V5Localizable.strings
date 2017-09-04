@@ -14,6 +14,7 @@
 "v5_alert_title" = "提醒";
 "v5_alert_no_camera" = "相机权限受限，请到设置中开启";
 "v5_alert_no_piclibrary" = "相册访问权限受限，请到设置中开启";
+"v5_alert_no_recordpermission" = "录音访问权限受限";
 "v5_alert_no_browser" = "打开浏览器失败";
 "v5_alert_no_phone" = "拨号失败";
 "v5_alert_no_email" = "打开电子邮箱失败";
