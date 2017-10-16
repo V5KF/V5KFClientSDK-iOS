@@ -156,7 +156,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  转人工客服
  */
-- (V5ControlMessage *)switchToArtificialService;
+- (nullable V5ControlMessage *)switchToArtificialService;
 
 /**
  *  上线，开启在线对话
