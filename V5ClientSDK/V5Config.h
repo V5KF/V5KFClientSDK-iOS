@@ -22,6 +22,7 @@
 @property (nonatomic, strong) NSString *site; // 站点编号
 @property (nonatomic, strong) NSString *account; // 应用账号
 @property (nonatomic, strong) NSString *appId; // 应用AppId
+@property (nonatomic, strong) NSDictionary *baseInfo; // V5系统内置的客户基本信息,字符串键值对格式
 @property (nonatomic, strong) NSDictionary *userInfo; // 自定义用户信息,字符串键值对格式
 @property (nonatomic) BOOL pushEnable; //是否开启了推送
 

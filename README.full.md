@@ -241,16 +241,25 @@ config.nickname = @"test-张三";
 config.gender = 1; //性别:0-未知 1-男 2-女
 config.avatar = @"头像URL"; //客户头像URL
 config.vip = 2; //VIP等级
+
 //openId:用户唯一ID,长度32字节以内,不同的openId消息记录单独保存,可透传到座席端提供给座席插件,替代v1.2.0之前版本的uid（uid不再使用）
 //若您是旧版本SDK用户，只是想升级，为兼容旧版，避免客户信息改变可继续使用config.uid，可不用openId
 config.openId = @"ios-user-id-for-test";
 // 注：openId尽量不要携带特殊字符（$&+,/:;=?@%#[]以及空格之类的字符），若包含则会经过urlencode编码，客席插件收到这样的oid后要相应的解码处理(decodeURIComponent)
+
 // 添加自定义用户信息NSDictionary,(仅在开启对话页面前设置生效)
 config.userInfo = @{@"商品名称": @"牛仔裤", 
 					@"商品价格": @"¥168.00"};
+
+// [1.3.8新增]设置V5系统内置的客户基本信息，区别于userInfo，这里设置的是V5系统内置字段
+// 支持字段：country,province,city,language(上面的nickname,gender,avatar,vip也可在此设置)
+config.baseInfo = @{@"country": @"中国",
+              @"province": @"广东",
+              @"city": @"深圳",
+              @"language": @"zh-cn"};
 ```
 
-当 `nickname`、`openId`、`avatar`、`device_token` 等配置项配置完，下次需要修改(如App内切换了登录账号，修改了客户昵称或头像时)并向座席更新时需要在开启会话前调用 **`[config shouldUpdateUserInfo]`**，这样才会向服务端更新这几个配置项。同样若想更新站点信息，需要在`onChatActivityConnect`中调用 **`[[V5ClientAgent shareClient] updateSiteInfo]`**。客户信息、站点信息（包含机器人信息和转人工开场白等V5后台可设置的信息）的更新存在缓存策略，系统每隔7天更新，一般无需处理，需要即时更新时方才调用此处接口。
+当 `nickname`、`openId`、`avatar`、`device_token` 等配置项配置完，下次需要修改(如App内切换了登录账号，修改了客户昵称或头像时)并向座席更新时需要在设置新信息前调用 **`[config shouldUpdateUserInfo]`**，这样才会向服务端更新这几个配置项。同样若想更新站点信息，需要在`onChatActivityConnect`中调用 **`[[V5ClientAgent shareClient] updateSiteInfo]`**。客户信息、站点信息（包含机器人信息和转人工开场白等V5后台可设置的信息）的更新存在缓存策略，系统每隔7天更新，一般无需处理，需要即时更新时方才调用此处接口。
 
 ### 5.3 启动会话界面
 通过简单地添加一个在线咨询按钮即可使用智能客服客户端功能，在按钮点击事件处理中加入启动会话界面的代码:
@@ -1010,3 +1019,6 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
 
 - 2017/10/25 文档版本 Ver1.0_r170724，SDK 版本 v1.3.7(r171025)
   1. 修复文本消息含多个a标签链接导致的识别错误。
+
+- 2018/01/04 SDK 版本 v1.3.8_r180104
+  1. 增加V5Config下的接口baseInfo, 传递键值对信息，可设置country,province,city,language(nickname,gender,avatar,vip也可在此设置)

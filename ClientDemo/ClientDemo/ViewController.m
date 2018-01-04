@@ -64,6 +64,12 @@
     // 添加自定义用户信息NSDictionary,(仅在开启对话页面前设置生效)，示例如下：
     config.userInfo = @{@"商品名称": @"牛仔裤", @"商品价格": @"¥168.00"};
     
+    // [1.3.0新增]添加V5系统内置的客户基本信息，区别于userInfo，这里设置的是V5系统内置字段
+    config.baseInfo = @{@"country": @"中国",
+                        @"province": @"广东",
+                        @"city": @"深圳",
+                        @"language": @"zh-cn"};
+    
     V5ChatViewController *chatViewController = [V5ClientAgent createChatViewController];
     // 不显示底部栏（有底部栏的需加此配置）
     chatViewController.hidesBottomBarWhenPushed = YES;
