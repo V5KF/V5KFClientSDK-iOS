@@ -187,7 +187,7 @@ config.baseInfo = @{@"country": @"中国",
 
 **指定人工客服或分组设置方式：**
 
-```java
+```objective-c
 /*
  * 连接建立后才可以调用下面接口，以下是两种转人工情况示例（在onClientViewConnect回调中执行，参考：【README.full.md】5.5 对话界面代理）
  */

@@ -156,8 +156,13 @@
 - (void)onClientViewConnect {
     NSLog(@"<--- onClientViewConnect --->");
     
-    // 连接建立后找指定客服 参数：客服组ID、客服ID
-    //[[V5ClientAgent shareClient] humanServiceOfGroupId:1 workerId:114052];
+    /*
+     * 连接建立后才可以调用下面接口，以下是两种转人工情况示例（在onClientViewConnect回调中执行，参考：5.5 对话界面代理）
+     */
+    // 【转】指定人工客服（调用时立即转），参数: 客服组id,客服id （以下数字仅作为示例，具体ID请前往V5后台查看客服信息）
+    //[[V5ClientAgent shareClient] humanServiceOfGroupId:0 workerId:114052];
+    // 【指定人工客服】点击转人工按钮或者问题触发转人工时会转到指定人工，参数"0 132916"中两个数字先后对应需要转的客服组ID和客服ID
+    //[[V5ClientAgent shareClient] sendMessage:[[V5ControlMessage alloc] initWithCode:4 argc:2 argv:@"0 114052"]];
     
     // 发送图文消息示例
 //    V5ArticlesMessage *articleMsg = [[V5ArticlesMessage alloc] init];
