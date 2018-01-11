@@ -185,6 +185,18 @@ config.baseInfo = @{@"country": @"中国",
 
 当 `nickname`、`openId`、`avatar`、`device_token` 等配置项配置完，下次需要修改(如App内切换了登录账号，修改了客户昵称或头像时)并向座席更新时需要在设置新信息前调用 **`[config shouldUpdateUserInfo]`**，这样才会向服务端更新这几个配置项。同样若想更新站点信息，需要在`onChatActivityConnect`中调用 **`[[V5ClientAgent shareClient] updateSiteInfo]`**。客户信息、站点信息（包含机器人信息和转人工开场白等V5后台可设置的信息）的更新存在缓存策略，系统每隔7天更新，一般无需处理，需要即时更新时方才调用此处接口。
 
+**指定人工客服或分组设置方式：**
+
+```java
+/*
+ * 连接建立后才可以调用下面接口，以下是两种转人工情况示例（在onClientViewConnect回调中执行，参考：【README.full.md】5.5 对话界面代理）
+ */
+// 【转】指定人工客服（调用时立即转），参数: 客服组id,客服id （以下数字仅作为示例，具体ID请前往V5后台查看客服信息）
+[[V5ClientAgent shareClient] humanServiceOfGroupId:0 workerId:114052];
+// 【指定人工客服】点击转人工按钮或者问题触发转人工时会转到指定人工，参数"0 132916"中两个数字先后对应需要转的客服组ID和客服ID
+[[V5ClientAgent shareClient] sendMessage:[[V5ControlMessage alloc] initWithCode:4 argc:2 argv:@"0 114052"]];
+```
+
 ### 4.3 启动会话界面
 
 通过简单地添加一个在线咨询按钮即可使用智能客服客户端功能，在按钮点击事件处理中加入启动会话界面的代码:
