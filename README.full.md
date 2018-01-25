@@ -1036,7 +1036,7 @@ SDK 存在新版本时，请尽量更新到最新版本 SDK，注意查看文档
   1. 增加V5Config下的接口baseInfo, 传递键值对信息，可设置country,province,city,language(nickname,gender,avatar,vip也可在此设置)
 
 - 2018/01/11 SDK 版本 v1.3.9_r180111
-  1. 增加siteinfo,hotques的请求参数channel=app&os=android&account=xxx
+  1. 支持常见问题按渠道区分，增加siteinfo,hotques的请求参数channel=app&os=android&account=xxx
 
 - 2018/01/24 SDK 版本 v1.3.10_r180124
   1. 拍照返回页面异常补丁
