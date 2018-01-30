@@ -1,6 +1,7 @@
 
 # V5KFClientSDK-iOS
-> 此为V5KF智能客服iOS客户端SDK快速接入文档，包含接入客服系统的基本配置和代码接口，更全面详细的文档可参考[这里](./README.full.md)
+
+> 此为V5KF智能客服iOS客户端SDK快速接入文档，包含接入客服系统的基本配置和代码接口，更全面详细的文档可参考[这里](https://desk.v5kf.com/docs/sdk/ios/index.html)
 
 ## 1 开发环境准备
 
@@ -121,6 +122,7 @@ github "V5KF/V5KFClientSDK-iOS"
 **注:** 本SDK 1.1.10 以上版本已完全兼容 `HTTPS`，若无特殊需求，无需配置 ATS 项`NSAllowsArbitraryLoads`，但仍须配置`NSAllowsArbitraryLoadsInWebContent`。原因：本SDK在 1.1.10 版本开始支持 https，SDK 默认会将访问的网络图片(比如用户头像)和其他网络请 求进行自动转为 `https` 方式访问，若目标站点未支持 https 仍需要 http 访问，可通过设置` [V5ClientAgent shareClient].config.autoSSL = NO `来取消自动转 `https`，并自行配置好对应的 `ATS` 选项。另外1.2.9版本开始支持webview加载网页，网页URL无法确保支持https，故仍需要配置`NSAllowsArbitraryLoadsInWebContent`。
 
 ### 3.2 权限
+
 由于 SDK 中使用到相册、相机还有录音，在 Info.plist 中需要加入以下内容: (文中以 XML 格式描述)
 
 ```
@@ -152,6 +154,7 @@ github "V5KF/V5KFClientSDK-iOS"
 ![SDK后台配置](./pictures/ios_sdk_6.png)
 
 ### 4.2 用户信息和参数设置
+
 使用 SDK 提供的 UI 集成，需要在**启动会话界面之前**进行用户信息和参数配置。配置项如下:
 
 ```objective-c
@@ -302,6 +305,7 @@ popover.delegate = self;
 ```
 
 ### 4.4 生命周期处理
+
 在使用 UI 集成的 SDK 中， **【必须】** 在 `AppDelegate` 中添加下面代码:
 	
 ```objective-c
