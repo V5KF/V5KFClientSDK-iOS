@@ -107,6 +107,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)checkConnect;
 
 /**
+ *  获取当前会话的服务状态
+ */
+- (void)getStatus;
+
+/**
  *  刷新消息(用于从后台或其他界面回到会话时主动刷新消息)
  *  已在onApplicationWillEnterForeground内有执行
  */
