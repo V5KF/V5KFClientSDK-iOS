@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "V5Client"
-  s.version          = "1.3.11"
+  s.version          = "1.3.12"
   s.summary          = "A customer service SDK for users of V5KF.COM used on iOS."
   s.description      = <<-DESC
                        It is a customer service SDK used on iOS, which implement by Objective-C. More info in http://ww.v5kf.com.
