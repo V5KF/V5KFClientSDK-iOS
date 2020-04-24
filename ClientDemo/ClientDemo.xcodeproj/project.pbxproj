@@ -20,6 +20,7 @@
 		592667E01C4655E400F20E9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667DF1C4655E400F20E9D /* AudioToolbox.framework */; };
 		592667E21C4655F000F20E9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E11C4655F000F20E9D /* Security.framework */; };
 		592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592667E31C4655FC00F20E9D /* CFNetwork.framework */; };
+		592CEFFB24509D10005A2169 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592CEFFA24509D10005A2169 /* WebKit.framework */; };
 		595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E71CF54506001026E7 /* libopencore-amrnb.a */; };
 		595BF9011CF54506001026E7 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595BF8E81CF54506001026E7 /* libopencore-amrwb.a */; };
 		595BF9031CF54506001026E7 /* V5Client.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 595BF8F31CF54506001026E7 /* V5Client.bundle */; };
@@ -45,6 +46,7 @@
 		592667DF1C4655E400F20E9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		592667E11C4655F000F20E9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		592667E31C4655FC00F20E9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		592CEFFA24509D10005A2169 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		595BF8E71CF54506001026E7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		595BF8E81CF54506001026E7 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		595BF8EB1CF54506001026E7 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			files = (
 				59CD02831CE467FB00DCDF34 /* libstdc++.tbd in Frameworks */,
 				59CD027F1CE4674A00DCDF34 /* AVFoundation.framework in Frameworks */,
+				592CEFFB24509D10005A2169 /* WebKit.framework in Frameworks */,
 				592667E41C4655FC00F20E9D /* CFNetwork.framework in Frameworks */,
 				592667E21C4655F000F20E9D /* Security.framework in Frameworks */,
 				595BF9001CF54506001026E7 /* libopencore-amrnb.a in Frameworks */,
@@ -108,6 +111,7 @@
 				592667D91C4655C200F20E9D /* libsqlite3.tbd */,
 				592667AC1C46555200F20E9D /* ClientDemo */,
 				592667AB1C46555200F20E9D /* Products */,
+				592CEFF924509D10005A2169 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +146,14 @@
 				592667AE1C46555200F20E9D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		592CEFF924509D10005A2169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592CEFFA24509D10005A2169 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		595BF8E11CF54506001026E7 /* V5ClientSDK */ = {
@@ -240,6 +252,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
