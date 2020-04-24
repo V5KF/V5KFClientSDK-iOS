@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "V5ClientSDK"
-  s.version          = "1.3.12"
+  s.version          = "1.3.13"
   s.summary          = "A customer service SDK for users of V5KF.COM used on iOS."
   s.description      = <<-DESC
                        It is a customer service SDK used on iOS, which implement by Objective-C. More info in http://ww.v5kf.com.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   # s.ios.exclude_files = 'Classes/osx'
   # s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
-  s.frameworks = 'Foundation', 'AVFoundation', 'CoreTelephony', 'Security', 'AudioToolbox', 'CFNetwork', 'MediaPlayer'
+  s.frameworks = 'Foundation', 'AVFoundation', 'CoreTelephony', 'Security', 'AudioToolbox', 'CFNetwork', 'MediaPlayer', 'WebKit'
   s.libraries = 'sqlite3', 'icucore', 'stdc++'
   s.vendored_libraries = 'V5ClientSDK/**/*.a'
   s.preserve_path = '**/*.a'
