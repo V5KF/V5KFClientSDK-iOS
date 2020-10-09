@@ -47,6 +47,7 @@ V5Client的实现依赖了一些系统框架，在开发应用时，要在工程
 - CFNetwork.framework
 - Security.framework
 - MediaPlayer.framework
+- WebKit.framework
 
 ### 2.4 静态库
 
