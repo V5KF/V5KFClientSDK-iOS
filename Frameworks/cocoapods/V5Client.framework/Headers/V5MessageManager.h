@@ -16,6 +16,7 @@
 #import "V5ControlMessage.h"
 #import "V5ArticlesMessage.h"
 #import "V5UndefinedMessage.h"
+#import "V5EventMessage.h"
 
 @interface V5MessageManager : NSObject
 

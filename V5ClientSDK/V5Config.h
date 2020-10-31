@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@interface V5ConfigWorkerInfo : NSObject
+@property (nonatomic, strong) NSNumber *wid;
+@property (nonatomic, strong) NSString *nickname; // 昵称
+@property (nonatomic, strong) NSString *avatar; // 头像
+- (instancetype)initWithInfo:(NSNumber *)wid andNickname:(NSString *)nickname andAvatar:(NSString *)avatar;
+@end
+
 @interface V5Config : NSObject
 
 @property (nonatomic, strong) NSString *openId; // [修改]用户id => openId
@@ -39,6 +46,8 @@
 @property (nonatomic, strong) NSString *workerPhoto;
 @property (nonatomic, strong) NSString *workerName;
 @property (nonatomic, assign) NSInteger workerId;
+@property (nonatomic, assign) long long unreadWorkerMsgId;
+@property (nonatomic, assign) long long unreadMsgId;
 
 /* 适配ATS，自动处理http链接为https，默认YES */
 @property (nonatomic, assign) BOOL autoSSL;
@@ -49,5 +58,7 @@
  *  需要更新用户信息时调用
  */
 - (void)shouldUpdateUserInfo;
-
+- (NSString *)workerPhotoById:(NSNumber *)wid;
+- (NSString *)workerNicknameById:(NSNumber *)wid;
+- (void) setWorkerInfo:(NSNumber *)wid andNickname:(NSString *)nickname andAvatar:(NSString *)avatar;
 @end

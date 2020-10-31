@@ -40,6 +40,8 @@
 @property (nonatomic, strong) NSDictionary *customContent;
 // 自定义消息id
 @property (nonatomic, assign) long long msgId;
+// 检查消息是否撤回
+@property (nonatomic, assign) BOOL canceled;
 
 - (instancetype)initWithJSON:(NSDictionary *)data;
 - (NSString *)getDefaultContent;
